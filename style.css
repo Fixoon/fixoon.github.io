@@ -398,7 +398,7 @@ main{
   font-weight: 400;
 }
 a.tw:before{
-  content: url(images/twitter-box.svg);
+  content: url(twitter-box.svg);
   width: 28px;
   height: 28px;
   float: left;
@@ -408,7 +408,7 @@ a.tw:hover{
   color: #55ACEE;
 }
 a.fb:before{
-  content: url(images/facebook-box.svg);
+  content: url(facebook-box.svg);
   width: 28px;
   height: 28px;
   float: left;
@@ -418,7 +418,7 @@ a.fb:hover{
   color: #3b5998;
 }
 a.mail:before{
-  content: url(images/gmail.svg);
+  content: url(gmail.svg);
   width: 28px;
   height: 28px;
   float: left;
@@ -562,19 +562,19 @@ footer span a:before{
   margin-right: 3px;
 }
 a.tw:before{
-  content: url(images/twitter-box.svg);
+  content: url(twitter-box.svg);
 }
 a.tw:hover{
   color: #55ACEE;
 }
 a.fb:before{
-  content: url(images/facebook-box.svg);
+  content: url(facebook-box.svg);
 }
 a.fb:hover{
   color: #3b5998;
 }
 a.mail:before{
-  content: url(images/gmail.svg);
+  content: url(gmail.svg);
 }
 
 @media only screen and (min-width : 320px) and (max-width : 460px) {
