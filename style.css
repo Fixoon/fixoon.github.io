@@ -610,7 +610,7 @@ a.mail:before{
 
 @media screen and (min-width: 980px) {
   body{
-    background: url(images/trianglify-background.svg) no-repeat center center fixed;
+    background: url(trianglify-background.svg) no-repeat center center fixed;
     background-size: cover;
   }
   .box-wrap{
