@@ -324,14 +324,15 @@ main{
 /* CIRCLE FOR THE BOXES */
 .tl-box:before{
   content: "";
-  width: 10px;
-  height: 10px;
-  border: 3px solid black;
-  border-radius: 8px;
+  box-sizing: border-box;
+  width: 0.8em;
+  height: 0.8em;
+  border: 0.15em solid black;
+  border-radius: 50%;
   background: #8e8e8e;
   position: absolute;
   top: 50%;
-  margin-top: -8px;
+  margin-top: -0.4em;
 }
 /* ARROW FOR THE BOXES */
 .tl-box:after{
@@ -608,16 +609,20 @@ a.mail:before{
 }
 @media only screen and (min-width : 461px) and (max-width : 979px) {
   .tl-box{
-    width: 41%;
+    box-sizing: border-box;
+    width: 44%;
+    padding: 2%;
   }
   .tl-box:nth-of-type(even):before{
-    left: 44.8vw !important;
+    left: 113.64% !important;
+    margin-left: -0.4em
   }
   .tl-box:nth-of-type(odd):before{
-    right: 44.8vw !important;
+    right: 113.65% !important;
+    margin-right: -0.4em;
   }
-  .tl-box:before{
-
+  footer span:nth-of-type(4){
+    display: none;
   }
 }
 
