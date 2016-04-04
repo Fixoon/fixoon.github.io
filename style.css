@@ -34,7 +34,7 @@ body,html {
   margin: 0;
   padding: 0;
   color: #3d3d3d;
-  //background: url(trianglify-background.svg) no-repeat center center fixed;
+  background: url(trianglify-background.svg) no-repeat center center fixed;
   background-size: cover;
   font-size: normal;
 }
@@ -307,9 +307,9 @@ main{
 }
 /* TL CONTENT BOX */
 .tl-box{
-  width: 315px;
+  swidth: 315px;
   height: auto;
-  padding: 16px;
+  spadding: 16px;
   margin-bottom: 40px;
   /* border: 1px solid #4B2F2F; */
   position: relative;
@@ -317,6 +317,9 @@ main{
   -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
   -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  box-sizing: border-box;
+  width: 45%;
+  padding: 2.2%;
 }
 .tl-box b{
   font-size: 1.375;
@@ -353,7 +356,8 @@ main{
   background: #9da2be;
 }
 .tl-box:nth-of-type(even):before{
-  left: 365px;
+  left: 111.11%;
+  margin-left: -0.4em
 }
 .tl-box:nth-of-type(even):after{
   margin-left: -9px;
@@ -365,7 +369,8 @@ main{
   background: rgba(186,177,169,1);
 }
 .tl-box:nth-of-type(odd):before{
-  right: 365px;
+  right: 111.12%;
+  margin-right: -0.4em;
 }
 .tl-box:nth-of-type(odd):after{
   margin-right: -9px;
@@ -375,7 +380,6 @@ main{
 .tl-box:last-of-type{
   margin-bottom: 0!important;
 }
-
 
 
 
@@ -588,7 +592,7 @@ a.mail:before{
   .tl-box:before{
     right: 109.89% !important;
     left: auto !important;
-    margin-right: -0.8em;
+    margin-right: -0.8em !important;
   }
   .tl-box:after{
     margin-right: -9px !important;
@@ -606,32 +610,22 @@ a.mail:before{
     display: none;
   }
   footer{
-    background: lightgray;
+    backgr2ound: #eee;
   }
 }
+
 @media only screen and (min-width : 461px) and (max-width : 979px) {
-  .tl-box{
-    box-sizing: border-box;
-    width: 44%;
-    padding: 2%;
-  }
-  .tl-box:nth-of-type(even):before{
-    left: 113.64% !important;
-    margin-left: -0.4em
-  }
-  .tl-box:nth-of-type(odd):before{
-    right: 113.65% !important;
-    margin-right: -0.4em;
-  }
   footer span:nth-of-type(4){
     display: none;
+  }
+  footer{
+    backgrou2nd: #232740;
   }
 }
 
 @media screen and (min-width: 980px) {
   body{
-    background: url(trianglify-background.svg) no-repeat center center fixed;
-    background-size: cover;
+
   }
   .box-wrap{
     max-width: 1180px;
@@ -639,7 +633,7 @@ a.mail:before{
     margin: 0 auto;
   }
   .tl-wrapper{
-    width: 746px;
+    width: 846px;
   }
   footer{
     margin-bottom: 3%;
