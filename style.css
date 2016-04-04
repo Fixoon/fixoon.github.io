@@ -577,16 +577,18 @@ a.mail:before{
   content: url(gmail.svg);
 }
 
+/* MOBILE PHONE PORTAIT */
 @media only screen and (min-width : 320px) and (max-width : 460px) {
   .tl-box{
     box-sizing: border-box;
-    width: 92%;
+    width: 91%;
     padding: 4%;
     margin: 0 0 8% auto;
   }
   .tl-box:before{
-    right: 105% !important;
+    right: 109.89% !important;
     left: auto !important;
+    margin-right: -0.8em;
   }
   .tl-box:after{
     margin-right: -9px !important;
@@ -594,8 +596,8 @@ a.mail:before{
     left: auto !important;
   }
   .tl-line{
-    left: 0.8%;
-    margin-left: 0;
+    left: 0.4em;
+    margin-left: -1px;
   }
   .head h1{
     font-size: 3em;
