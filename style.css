@@ -318,7 +318,7 @@ main{
   -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
   box-sizing: border-box;
-  width: 45%;
+  width: 45.5%;
   padding: 2.2%;
 }
 .tl-box b{
@@ -356,7 +356,7 @@ main{
   background: #9da2be;
 }
 .tl-box:nth-of-type(even):before{
-  left: 111.11%;
+  left: 109.89%;
   margin-left: -0.4em
 }
 .tl-box:nth-of-type(even):after{
@@ -369,7 +369,7 @@ main{
   background: rgba(186,177,169,1);
 }
 .tl-box:nth-of-type(odd):before{
-  right: 111.12%;
+  right: 109.91%;
   margin-right: -0.4em;
 }
 .tl-box:nth-of-type(odd):after{
@@ -633,7 +633,7 @@ a.mail:before{
     margin: 0 auto;
   }
   .tl-wrapper{
-    width: 846px;
+    width: 746px;
   }
   footer{
     margin-bottom: 3%;
