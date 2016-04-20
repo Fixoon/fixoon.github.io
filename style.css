@@ -34,14 +34,11 @@ body,html {
   margin: 0;
   padding: 0;
   color: #3d3d3d;
-  background: url(trianglify-background.svg) no-repeat center center fixed;
+  background: url(pattern.svg) no-repeat center center fixed;
   background-size: cover;
   font-size: normal;
 }
 
-b{
-  font-weight: 700;
-}
 a{
   color: inherit;
   text-decoration: none;
@@ -65,66 +62,6 @@ h3{
   font-size: 2.125em;
 }
 
-/* INPUT/TEXTAREA PROPERTIES */
-input, textarea{
-  border:0;
-  outline: none;
-  box-shadow:none;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  font-weight: 300;
-  font-family: 'Roboto';
-}
-::-webkit-input-placeholder {
-   color: #999;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: #999;
-}
-::-moz-placeholder {  /* Firefox 19+ */
-  color: #999;
-}
-:-ms-input-placeholder {
-  color: #999;
-}
-input[type="submit"],
-input[type="button"]{
-  background: transparent;
-  padding: 2px;
-  border: 1px solid #856941;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  font-size: 1.188;
-}
-input[type="submit"]:hover,
-input[type="button"]:hover{
-  cursor: pointer;
-}
-input[type="submit"]:disabled,
-input[type="button"]:disabled{
-  cursor: default;
-}
-input[type="email"],
-input[type="name"],
-input[type="password"]{
-  border: none;
-  padding: 2px;
-  border-bottom: 1px solid #856941 !important;
-  background: transparent;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  font-size: 1.25em;
-}
-textarea{
-  background: transparent;
-  border: 1px solid #856941;
-  font-size: 1.125em;
-  padding: 3px;
-  display: block;
-  float: left;
-}
 
 /* HEAD DIV */
 .head{
@@ -135,33 +72,13 @@ textarea{
   -moz-box-shadow: 0 12px 15px 0 rgba(0,0,0,.24);
   -webkit-box-shadow: 0 12px 15px 0 rgba(0,0,0,.24);
   box-shadow: 0 12px 15px 0 rgba(0,0,0,.24);
-  background: #232740 /* #303F9F */;
-  background: -moz-linear-gradient(top,  rgba(58,73,158,1) 0%, rgba(48,63,159,1) 100%); /* FF3.6+ */
-  sbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(58,73,158,1)), color-stop(100%,rgba(48,63,159,1))); /* Chrome,Safari4+ */
-  sbackground: -webkit-linear-gradient(top,  rgba(58,73,158,1) 0%,rgba(48,63,159,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(58,73,158,1) 0%,rgba(48,63,159,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(58,73,158,1) 0%,rgba(48,63,159,1) 100%); /* IE10+ */
-  sbackground: linear-gradient(to bottom,  rgba(58,73,158,1) 0%,rgba(48,63,159,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a499e', endColorstr='#303f9f',GradientType=0 ); /* IE6-9 */
+  background: #232740;
   color: gray;
 }
-.head h1{
-  text-align: center;
-  letter-spacing: 1px;
-  font-weight: 400;
-  color: #aaa;
-}
-.head-top{
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding-top: 17px
-}
-
 /* NAVIGATION BUTTONS */
 .nav-buttons{
   width: 356px;
-  height: 43px;
+  height: 38px;
   text-align: center;
   margin: 0 auto;
   font-size: 1.75em ;
@@ -175,7 +92,7 @@ textarea{
   margin: 0px 10px;
   position: relative;
   cursor: pointer;
-  padding: 2px 2px;
+  padding: 6px 2px;
 }
 .nav-buttons a:hover{
   color: #7e85b5;
@@ -186,7 +103,7 @@ textarea{
 .nav-buttons-divider{
   height: 32px;
   width: 2px;
-  margin-top: 3px;
+  margin-top: 7px;
   float: left;
   background: gray;
   -ms-transform: rotate(20deg);
@@ -203,43 +120,29 @@ main{
 .divider{
   width: 100%;
   height: 2px;
+  opacity: 0.5;
   float: left;
-  background: #D1C5B7;
+  background: #232740;
 }
-.divider:after{
-  content: " ";
-  display: block;
-  background: #EBDFD1;
-  height: 1px;
-  width: 92%;
-  margin-left: 4%;
-  border-top: 1px solid #9E9284;
-}
+
 
 
 /* CONTENT DIV */
 .content{
-  width: 92%;
+  width: 100%;
   float: left;
   height: auto;
-  padding: 4%;
+  padding: 4% 0%;
   color: #4B2F2F; /* 856941 */
-  background: #D1C5B7;
+  //background: #c2c2c2;
 }
 .content h1,h2,h3,h4,h5,h6{
   color: #2E324D;
 }
-
-/* SCROLLING CONTENT */
-.main-info{
-  width: 100%;
-  width: auto;
-  height: auto;
+h1{
+  font-weight: 400;
 }
-.main-info h2{
-  line-height: 1;
-}
-.main-info img{
+.content img{
   max-width: 27%;
   border-radius: 5px;
   float: left;
@@ -248,16 +151,15 @@ main{
   -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
   }
-.main-info p{
+.content p{
   margin: 0;
-  font-size: 1.188em;
-  line-height: 25px;
+  font-size: 2em;
   text-align: justify;
 }
-.main-info b{
+.content b{
   font-weight: 400;
 }
-.main-info a{
+.content a{
   font-weight: 400;
 }
 
@@ -277,13 +179,14 @@ main{
 }
 .tl-line{
   width: 2px;
-  height: 100%;
-  background: #8e8e8e;
+  height: calc(100% - 100px);
+  background: #232740;
   position: absolute;
   left: 50%;
+  top: 40px;
   margin-left: -1px;
   }
-.tl-line:before{
+.2tl-line:before{
   content: "";
   background: #D1C5B7; /* #D1C5B7 */
   height: 42px;
@@ -292,18 +195,17 @@ main{
   }
 .tl-line:after{
   content: "";
-  background: rgb(142,142,142); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(142,142,142,1) 0%, rgba(209,197,183,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(142,142,142,1)), color-stop(100%,rgba(209,197,183,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(142,142,142,1) 0%,rgba(209,197,183,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(142,142,142,1) 0%,rgba(209,197,183,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(142,142,142,1) 0%,rgba(209,197,183,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(142,142,142,1) 0%,rgba(209,197,183,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e8e8e', endColorstr='#d1c5b7',GradientType=0 ); /* IE6-9 */
-  height: 54px;
+  background:  rgb(35, 39, 64); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(35, 39, 64, 1)) 0%, rgba(35, 39, 64, 0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(35, 39, 64, 1)), color-stop(100%, rgba(35, 39, 64, 0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(35, 39, 64, 1) 0%, rgba(35, 39, 64, 0)) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(35, 39, 64, 1) 0%, rgba(35, 39, 64, 0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(35, 39, 64, 1) 0%, rgba(35, 39, 64, 0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,   rgba(35, 39, 64, 1) 0%,  rgba(35, 39, 64, 0) 100%); /* W3C */
+  height: 30px;
   width: 2px;
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
 }
 /* TL CONTENT BOX */
 .tl-box{
@@ -313,16 +215,18 @@ main{
   margin-bottom: 40px;
   /* border: 1px solid #4B2F2F; */
   position: relative;
-  border-radius: 5px;
+  border-radius: 2px;
   -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
   -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
   box-sizing: border-box;
   width: 45.5%;
   padding: 2.2%;
+  border-bottom: 0.16em solid #232740;
+  resize: horizontal;
 }
 .tl-box b{
-  font-size: 1.375;
+  font-weight: 700;
 }
 /* CIRCLE FOR THE BOXES */
 .tl-box:before{
@@ -330,7 +234,7 @@ main{
   box-sizing: border-box;
   width: 0.8em;
   height: 0.8em;
-  border: 0.15em solid black;
+  border: 0.15em solid #232740;
   border-radius: 50%;
   background: #8e8e8e;
   position: absolute;
@@ -356,7 +260,7 @@ main{
   background: #9da2be;
 }
 .tl-box:nth-of-type(even):before{
-  left: 109.89%;
+  left: 109.91%;
   margin-left: -0.4em
 }
 .tl-box:nth-of-type(even):after{
@@ -366,10 +270,10 @@ main{
 /* PROPERTIES FOR ODD BOXES */
 .tl-box:nth-of-type(odd){
   margin-left: auto;
-  background: rgba(186,177,169,1);
+  background: #A9ABB7;
 }
 .tl-box:nth-of-type(odd):before{
-  right: 109.91%;
+  right: 109.89%;
   margin-right: -0.4em;
 }
 .tl-box:nth-of-type(odd):after{
@@ -382,169 +286,19 @@ main{
 }
 
 
-
-/* CONTACT */
-.contact-main{
-  width: 60%;
-  height: auto;
-  float: left;
-}
-.contact-main p{
-  margin: 0;
-  line-height: 26px;
-  font-size: 1.25em;
-}
-.contact-main p:nth-of-type(2){
-  margin: 18px 0px;
-}
-.contact-main a{
-  line-height: 1.2em;
-  font-weight: 400;
-}
-a.tw:before{
-  content: url(twitter-box.svg);
-  width: 28px;
-  height: 28px;
-  float: left;
-  margin-right: 3px;
-}
-a.tw:hover{
-  color: #55ACEE;
-}
-a.fb:before{
-  content: url(facebook-box.svg);
-  width: 28px;
-  height: 28px;
-  float: left;
-  margin-right: 3px;
-}
-a.fb:hover{
-  color: #3b5998;
-}
-a.mail:before{
-  content: url(gmail.svg);
-  width: 28px;
-  height: 28px;
-  float: left;
-  margin-right: 3px;
-}
-
-/* MAIL FORM */
-.mail-form{
-  width: 36%;
-  height: 353px;
-  float: right;
-  overflow: hidden;
-  position: relative;
-  padding-left: 4%;
-  text-indent: 4px;
-}
-.mail-form span{
-  display: block;
-  margin: 6px 0px;
-  float: left;
-  font-weight: 400
-}
-.mail-form h3{
-  margin-bottom: 6px;
-}
-.mail-form input[type="submit"]{
-  padding: 2px 32px 2px 2px;
-  margin: 6px 0px 0px 0px;
-  background: url(images/send.svg) no-repeat right 4px center;
-  height: 30px;
-  width: 168px;
-  border: none;
-  float: right;
-  transition: margin 0.2s, background 0.3s;
-}
-.mail-form input[type="submit"]:hover:enabled{
-  background: url(images/send_clr.svg) no-repeat right 4px center;
-}
-.mail-form input[type="email"],
-.mail-form input[type="name"]{
-  padding: 2px 2px 2px 32px;
-  margin: 6px 0px 6px 0px;
-  width: 350px;
-  height: 27px;
-  float: left;
-}
-.mail-form input[type="email"]{
-  background: url(images/email.svg) no-repeat 4px center;
-  transition: background 0.6s;
-}
-.mail-form input[type="email"]:focus{
-  background: url(images/email_clr.svg) no-repeat 4px center;
-}
-.mail-form input[type="name"]{
-  background: url(images/person.svg) no-repeat 4px center;
-  transition: background 0.6s;
-}
-.mail-form input[type="name"]:focus{
-  background: url(images/person_clr.svg) no-repeat 4px center;
-}
-.mail-form textarea{
-  margin: 6px 0px 6px 0px;
-  resize: none;
-  width: 376px;
-  height: 130px;
-  transition: border-color 0.6s, background 0.6s;
-  overflow: auto;
-  background: rgba(91, 32, 32, 0.04);
-}
-.mail-form textarea:focus{
-  border-color: #5B2020;
-}
-/* Anti-spam */
-input[type="text"]{
-  position: absolute;
-  z-index: -999;
-}
-
-/* ADMIN */
-.msg{
-  width: 1100px;
-  height: auto;
-  min-height: 26px;
-  font-size: 1.125em;
-  float: left;
-  padding: 2px 0px;
-}
-.msg:hover{
-  background: rgba(12,12,12,0.2)
-}
-.msg-name{
-  width: 200px;
-  min-height: 26px;
-  height: inherit;
-  float: left;
-}
-.msg-email{
-  width: 300px;
-  min-height: 26px;
-  height: inherit;
-  float: left;
-}
-.msg-message{
-  width: 600px;
-  min-height: 26px;
-  height: inherit;
-  float: left;
-}
-
-
-
-
 footer{
   width: 92%;
   height: auto;
   float: left;
   padding: 2% 4%;
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom: 0.2em solid #232740;
+
 }
 @keyframes flash {
-    0% {background: rgba(200, 200, 200, 0);}
+    0% {background: rgba(255, 255, 255, 0.2);}
     50% {background: rgba(200, 200, 200, 1);}
-    100% {background: rgba(200, 200, 200, 0);}
+    100% {background: rgba(255, 255, 255, 0.2);}
 }
 #footer:target{
   animation: .8s flash;
@@ -584,10 +338,10 @@ a.mail:before{
 /* MOBILE PHONE PORTAIT */
 @media only screen and (min-width : 320px) and (max-width : 460px) {
   .tl-box{
-    box-sizing: border-box;
     width: 91%;
     padding: 4%;
     margin: 0 0 8% auto;
+    font-size: 0.9em;
   }
   .tl-box:before{
     right: 109.89% !important;
@@ -609,17 +363,22 @@ a.mail:before{
   footer span:nth-of-type(4){
     display: none;
   }
-  footer{
-    backgr2ound: #eee;
+  .content{
+    width: 92%;
+    padding: 4%;
   }
 }
 
 @media only screen and (min-width : 461px) and (max-width : 979px) {
+  .tl-box{
+    font-size: 0.9em;
+  }
   footer span:nth-of-type(4){
     display: none;
   }
-  footer{
-    backgrou2nd: #232740;
+  .content{
+    width: 92%;
+    padding: 4%;
   }
 }
 
@@ -628,7 +387,7 @@ a.mail:before{
 
   }
   .box-wrap{
-    max-width: 1180px;
+    max-width: 1060px;
     height: auto;
     margin: 0 auto;
   }
