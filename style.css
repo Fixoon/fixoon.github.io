@@ -367,6 +367,13 @@ a.mail:before{
     width: 92%;
     padding: 4%;
   }
+  .content p{
+    margin: 0;
+    font-size: 1.6em;
+  }
+  .content h1{
+    font-size: 3em;
+  }
 }
 
 @media only screen and (min-width : 461px) and (max-width : 979px) {
