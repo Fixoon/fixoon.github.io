@@ -34,8 +34,6 @@ body,html {
   margin: 0;
   padding: 0;
   color: #3d3d3d;
-  background: url(pattern.svg) no-repeat center center fixed;
-  background-size: cover;
   font-size: normal;
 }
 
@@ -126,7 +124,7 @@ main:before{
   top: 0;
   left: 0;
   background-color: black;
-  background: url(images/pattern.svg) no-repeat center center;
+  background: url(pattern.svg) no-repeat center center;
   background-size: cover;
   will-change: transform;
   z-index: -1;
