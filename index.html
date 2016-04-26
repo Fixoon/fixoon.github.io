@@ -15,7 +15,7 @@
 		<div class="nav-buttons-divider"></div>
 		<a title="Coming Soon">Projekt</a>
 		<div class="nav-buttons-divider"></div>
-		<a id="contact" href="#footer">Kontakt</a>
+		<a id="contact">Kontakt</a>
 	</nav>
 	<div class="box-wrap">
 		<main>
@@ -80,6 +80,7 @@
 	<script>
 		var myButton = $('#contact'), myBox = $('footer');
 		myButton.click(function () {
+			$("html, body").scrollTop($(document).height());
 			myBox.addClass('animation');
 			myBox.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
 			function(e) {
