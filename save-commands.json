@@ -1,5 +1,5 @@
 {
     "commands": [
-        "*.less : lessc {filename} {name}.css"
+        "styles/*.less : lessc styles/{filename} styles/{name}.css"
     ]
 }

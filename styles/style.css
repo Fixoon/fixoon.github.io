@@ -52,7 +52,7 @@ body:before {
   height: 100%;
   top: 0;
   left: 0;
-  background: url(images/pattern.svg) no-repeat center center;
+  background: url('../images/pattern.svg') no-repeat center center;
   background-size: cover;
   will-change: transform;
   z-index: -1;
