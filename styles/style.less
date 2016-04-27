@@ -195,23 +195,6 @@ main{
   text-align: center;
   margin-bottom: 20px;
 }
-.tl-line{
-  position: absolute;
-  width: 2px;
-  height: calc(~"100% - 100px");
-  left: 50%;
-  top: 40px;
-  background: @baseBlue;
-  margin-left: -1px;
-  &:after{
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 30px;
-    bottom: -30px;
-    .gradient(rgba(35, 39, 64, 1), rgba(35, 39, 64, 0));
-  }
-}
 /* TL CONTENT BOX */
 .tl-box{
   position: relative;
@@ -225,25 +208,17 @@ main{
   font-size: 1.125em;
 
   /* PROPERTIES FOR EVEN BOXES */
-  &:nth-of-type(even){
+  &:nth-of-type(odd){
     background: #9da2be;
-    &:before{
-      left: 109.91%;
-      margin-left: -8px;
-    }
     &:after{
       margin-left: -9px;
       left: 100%;
     }
   }
   /* PROPERTIES FOR ODD BOXES */
-  &:nth-of-type(odd){
+  &:nth-of-type(even){
     margin-left: auto;
     background: #A9ABB7;
-    &:before{
-      right: 109.89%;
-      margin-right: -8px;
-    }
     &:after{
       margin-right: -9px;
       right: 100%;
@@ -252,18 +227,6 @@ main{
   /* MAKE LAST BOX HAVE NO BOTTOM MARGIN */
   &:last-of-type{
     margin-bottom: 0!important;
-  }
-  /* CIRCLE FOR THE BOXES */
-  &:before{
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 50%;
-    margin-top: -8px;
-    .border-radius(50%);
-    border: 2px solid @baseBlue;
-    background: #8e8e8e;
   }
   /* ARROW FOR THE BOXES */
   &:after{
@@ -280,7 +243,47 @@ main{
   & b{
     font-weight: 700;
   }
+  &:last-of-type > .tl-circle:after{
+    display: none;
+  }
+  &:nth-of-type(1) > .tl-circle:before{
+    display: none;
+  }
+  &:nth-of-type(even) > .tl-circle{
+    right: 109.84%;
+    margin-right: -8px;
+  }
+  &:nth-of-type(odd) > .tl-circle{
+    left: 109.90%;
+    margin-left: -8px;
+  }
 }
+.tl-circle{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  margin-top: -8px;
+  .border-radius(50%);
+  border: 2px solid @baseBlue;
+  background: #8e8e8e;
+
+  &:before, &:after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 4em;
+    background: @baseBlue;
+    left: 5px;
+  }
+  &:after{
+    top: 14px;
+  }
+  &:before{
+    bottom: 14px;
+  }
+}
+
 
 @keyframes flash {
     0% {background: rgba(255, 255, 255, 0.2);}
@@ -350,10 +353,10 @@ footer{
     padding: 4%;
     margin: 0 0 8% auto;
   }
-  .tl-box:before{
+  .tl-circle{
     right: 109.89% !important;
     left: auto !important;
-    margin-right: -0.8em !important;
+    margin-right: -16px !important;
   }
   .tl-box:after{
     margin-right: -9px !important;
@@ -374,9 +377,6 @@ footer{
   }
   .content{
     padding: 4%;
-  }
-  .tl-box{
-    font-size: 0.9em;
   }
   footer span:nth-of-type(4){
     display: none;
