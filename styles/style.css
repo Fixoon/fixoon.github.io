@@ -212,7 +212,7 @@ main {
 }
 .tl-box:nth-of-type(even):before {
   left: 109.91%;
-  margin-left: -0.4em;
+  margin-left: -8px;
 }
 .tl-box:nth-of-type(even):after {
   margin-left: -9px;
@@ -224,7 +224,7 @@ main {
 }
 .tl-box:nth-of-type(odd):before {
   right: 109.89%;
-  margin-right: -0.4em;
+  margin-right: -8px;
 }
 .tl-box:nth-of-type(odd):after {
   margin-right: -9px;
@@ -236,14 +236,14 @@ main {
 .tl-box:before {
   content: "";
   position: absolute;
-  width: 0.8em;
-  height: 0.8em;
+  width: 16px;
+  height: 16px;
   top: 50%;
-  margin-top: -0.4em;
+  margin-top: -8px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  border: 0.15em solid #2E324D;
+  border: 2px solid #2E324D;
   background: #8e8e8e;
 }
 .tl-box:after {
@@ -333,7 +333,7 @@ footer span a.mail:before {
     margin: 0 0 8% auto;
   }
   .tl-box:before {
-    right: 109.85% !important;
+    right: 109.89% !important;
     left: auto !important;
     margin-right: -0.8em !important;
   }
@@ -343,8 +343,7 @@ footer span a.mail:before {
     left: auto !important;
   }
   .tl-line {
-    left: 2%;
-    margin-left: -1px;
+    left: 1.7%;
   }
   footer span:nth-of-type(4) {
     display: none;
