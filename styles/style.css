@@ -35,16 +35,16 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
   position: relative;
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   color: #3d3d3d;
   font-size: normal;
+  /* Background for entire site */
 }
-/* Background for entire site */
 body:before {
   content: ' ';
   position: fixed;
@@ -76,10 +76,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto';
-  font-weight: 300;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto';
+  font-weight: 300;
   color: #2E324D;
 }
 h1 {
@@ -93,26 +93,26 @@ h3 {
 }
 /* NAVIGATION BUTTONS */
 nav {
+  position: relative;
   width: 100%;
   height: 46px;
-  text-align: center;
   margin: 0 auto;
+  text-align: center;
   color: black;
   font-size: 6.7vw;
-  position: relative;
   -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
   background: #23263a;
 }
 nav a {
-  width: auto;
-  display: inline-block;
-  color: #9da2be;
-  margin: 0px 10px;
   position: relative;
-  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  margin: 0px 10px;
   padding: 6px 2px;
+  color: #9da2be;
+  cursor: pointer;
   font-weight: 300;
 }
 nav a:hover {
@@ -124,13 +124,13 @@ nav a:hover {
 .nav-buttons-divider {
   display: inline-block;
   position: relative;
-  height: 68%;
   width: 2px;
+  height: 68%;
   top: 14%;
   background: gray;
+  transform: rotate(20deg);
   -ms-transform: rotate(20deg);
   -webkit-transform: rotate(20deg);
-  transform: rotate(20deg);
 }
 /* MAIN */
 main {
@@ -138,26 +138,25 @@ main {
 }
 /* CONTENT DIV */
 .content {
-  width: 100%;
   float: left;
+  width: 100%;
   height: auto;
   padding: 4% 0%;
   color: #4B2F2F;
 }
 /* DIVIDER */
 .divider {
+  float: left;
   width: 100%;
   height: 2px;
   opacity: 0.5;
-  float: left;
   background: #2E324D;
 }
 /* TIMELINE */
 .tl-wrapper {
+  position: relative;
   height: auto;
   margin: 0 auto;
-  position: relative;
-  font-size: 1.25em;
   z-index: 1;
 }
 .tl {
@@ -165,16 +164,20 @@ main {
   margin-bottom: 20px;
 }
 .tl-line {
+  position: absolute;
   width: 2px;
   height: calc(100% - 100px);
-  background: #2E324D;
-  position: absolute;
   left: 50%;
   top: 40px;
+  background: #2E324D;
   margin-left: -1px;
 }
 .tl-line:after {
   content: "";
+  position: absolute;
+  width: 2px;
+  height: 30px;
+  bottom: -30px;
   background-color: #232740;
   background: -webkit-gradient(linear, left top, left bottom, from(#232740), to(rgba(35, 39, 64, 0)));
   background: -webkit-linear-gradient(top, #232740, rgba(35, 39, 64, 0));
@@ -182,62 +185,28 @@ main {
   background: -ms-linear-gradient(top, #232740, rgba(35, 39, 64, 0));
   background: -o-linear-gradient(top, #232740, rgba(35, 39, 64, 0));
   background: linear-gradient(to bottom, #232740, rgba(35, 39, 64, 0));
-  height: 30px;
-  width: 2px;
-  position: absolute;
-  bottom: -30px;
 }
 /* TL CONTENT BOX */
 .tl-box {
-  swidth: 315px;
-  height: auto;
-  spadding: 16px;
-  margin-bottom: 40px;
   position: relative;
+  width: 45.5%;
+  height: auto;
+  padding: 2.2%;
+  margin-bottom: 40px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
+  border-bottom: 0.16em solid #2E324D;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  box-sizing: border-box;
-  width: 45.5%;
-  padding: 2.2%;
-  border-bottom: 0.16em solid #2E324D;
+  font-size: 1.125em;
+  /* PROPERTIES FOR EVEN BOXES */
+  /* PROPERTIES FOR ODD BOXES */
+  /* MAKE LAST BOX HAVE NO BOTTOM MARGIN */
+  /* CIRCLE FOR THE BOXES */
+  /* ARROW FOR THE BOXES */
 }
-/* CIRCLE FOR THE BOXES */
-.tl-box:before {
-  content: "";
-  box-sizing: border-box;
-  width: 0.8em;
-  height: 0.8em;
-  border: 0.15em solid #2E324D;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  background: #8e8e8e;
-  position: absolute;
-  top: 50%;
-  margin-top: -0.4em;
-}
-/* ARROW FOR THE BOXES */
-.tl-box:after {
-  content: "";
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  top: 50%;
-  margin-top: -9px;
-  background: #4B2F2F;
-  transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  z-index: -1;
-}
-.tl-box b {
-  font-weight: 700;
-}
-/* PROPERTIES FOR EVEN BOXES */
 .tl-box:nth-of-type(even) {
   background: #9da2be;
 }
@@ -249,7 +218,6 @@ main {
   margin-left: -9px;
   left: 100%;
 }
-/* PROPERTIES FOR ODD BOXES */
 .tl-box:nth-of-type(odd) {
   margin-left: auto;
   background: #A9ABB7;
@@ -262,9 +230,37 @@ main {
   margin-right: -9px;
   right: 100%;
 }
-/* MAKE LAST BOX HAVE NO BOTTOM MARGIN */
 .tl-box:last-of-type {
   margin-bottom: 0!important;
+}
+.tl-box:before {
+  content: "";
+  position: absolute;
+  width: 0.8em;
+  height: 0.8em;
+  top: 50%;
+  margin-top: -0.4em;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 0.15em solid #2E324D;
+  background: #8e8e8e;
+}
+.tl-box:after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  margin-top: -9px;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  background: #4B2F2F;
+  z-index: -1;
+}
+.tl-box b {
+  font-weight: 700;
 }
 @keyframes flash {
   0% {
@@ -335,7 +331,6 @@ footer span a.mail:before {
     width: 91%;
     padding: 4%;
     margin: 0 0 8% auto;
-    font-size: 0.9em;
   }
   .tl-box:before {
     right: 109.85% !important;
@@ -348,7 +343,7 @@ footer span a.mail:before {
     left: auto !important;
   }
   .tl-line {
-    left: 0.4em;
+    left: 2%;
     margin-left: -1px;
   }
   footer span:nth-of-type(4) {
@@ -380,6 +375,9 @@ footer span a.mail:before {
   }
   .tl-wrapper {
     width: 746px;
+  }
+  .tl-box {
+    font-size: 1.25em;
   }
   footer {
     margin-bottom: 3%;
