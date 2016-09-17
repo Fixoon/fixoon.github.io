@@ -72,7 +72,7 @@ nav a {
   width: auto;
   margin: 0px 10px;
   padding: 6px 2px;
-  color: #9da2be;
+  color: #ccc;
   cursor: pointer;
   font-weight: 300;
 }
@@ -94,11 +94,10 @@ nav a:hover {
   -webkit-transform: rotate(20deg);
 }
 .nav-buttons-disabled {
-  opacity: 0.4;
-  color: #999;
+  color: #666;
 }
 .nav-buttons-disabled:hover {
-  color: #999;
+  color: #666;
   cursor: default;
 }
 /* MAIN */
