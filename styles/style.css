@@ -292,14 +292,14 @@ footer span a.mail:before {
     font-size: 3em;
   }
   .tl-box {
-    width: 91%;
+    width: 82vw;
     padding: 4%;
     margin: 0 0 8% auto;
   }
   .tl-circle {
-    right: 109.89% !important;
+    right: 89vw !important;
     left: auto !important;
-    margin-right: -16px !important;
+    margin-right: -8px !important;
   }
   .tl-box:after {
     margin-right: -9px !important;
