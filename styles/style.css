@@ -268,13 +268,13 @@ footer span a.tw:before {
   content: url('../images/twitter-box.svg');
 }
 footer span a.tw:hover {
-  color: #55ACEE;
+  color: #2E324D;
 }
 footer span a.fb:before {
   content: url('../images/facebook-box.svg');
 }
 footer span a.fb:hover {
-  color: #3b5998;
+  color: #2E324D;
 }
 footer span a.mail:before {
   content: url('../images/gmail.svg');
@@ -288,9 +288,6 @@ footer span a.mail:before {
     margin: 0;
     font-size: 1.6em;
     line-height: 130%;
-  }
-  br {
-    line-height: 180%;
   }
   .content h1 {
     font-size: 3em;
