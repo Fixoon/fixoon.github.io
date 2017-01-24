@@ -287,6 +287,10 @@ footer span a.mail:before {
   .content p {
     margin: 0;
     font-size: 1.6em;
+    line-height: 130%;
+  }
+  br {
+    line-height: 180%;
   }
   .content h1 {
     font-size: 3em;
@@ -313,12 +317,12 @@ footer span a.mail:before {
     display: none;
   }
 }
-@media only screen and (min-width: 461px) and (max-width: 979px) {
+@media only screen and (min-width: 461px) and (max-width: 1024px) {
   nav {
     font-size: 1.75em;
   }
   .content {
-    padding: 4%;
+    padding: 4% !important;
   }
   .content p {
     margin: 0;
@@ -328,7 +332,7 @@ footer span a.mail:before {
     display: none;
   }
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 1025px) {
   body:before {
     content: ' ';
     position: fixed;
