@@ -133,11 +133,12 @@ nav{
 /* MAIN */
 main{
   float: left;
+	position: relative;
 }
 
 /* CONTENT DIV */
 .content{
-  float: left;
+
   width: 100%;
   height: auto;
   padding: 4% 0%;
@@ -265,6 +266,7 @@ main{
 footer{
   width: 100%;
   height: auto;
+	position: relative;
   float: left;
   padding: 2% 4%;
   background: rgba(255, 255, 255, 0.2);
@@ -372,7 +374,7 @@ footer{
 			background: url('../images/pattern.svg') no-repeat center center;
 			background-size: cover;
 			will-change: transform;
-			z-index: -1;
+			z-index: 0;
 		}
 	}
   nav{
