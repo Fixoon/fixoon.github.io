@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
 
 //Less variables
-@baseBlue: #2E324D;
+//@baseBlue: #2E324D;
+@baseBlue: #6495ed;
 //Less mixins
 .gradient (@startColor: #eee, @endColor: white) {
 	background-color: @startColor;
@@ -45,7 +46,8 @@ body{
   font-weight: 300;
   color: #3d3d3d;
   font-size: normal;
-  background: #eee;
+  //background: #eee;
+	background: #fff;
 }
 
 a{
@@ -91,8 +93,8 @@ nav{
   color: black;
   font-size: 6.7vw;
   .drop-shadow(0, 12px, 15px, 0, .24);
-  background: darken(@baseBlue, 6%);
-
+  //background: darken(@baseBlue, 6%);
+	background: #4c4c4c;
 
   & a{
     position: relative;
@@ -138,11 +140,22 @@ main{
 
 /* CONTENT DIV */
 .content{
-
   width: 100%;
   height: auto;
   padding: 4% 0%;
   color: #4B2F2F;
+}
+
+#about{
+	background: @baseBlue;
+	padding: 3%;
+	margin: 2% 0%;
+	color: #fff;
+	.border-radius;
+	.drop-shadow(0, 2px, 5px, 0, .26);
+	h1{
+		color: #fff;
+	}
 }
 
 /* DIVIDER */
@@ -179,7 +192,8 @@ main{
 
   /* PROPERTIES FOR EVEN BOXES */
   &:nth-of-type(odd){
-    background: #9da2be;
+    //background: #9da2be;
+		background: #f3f3f3;
     &:after{
       margin-left: -9px;
       left: 100%;
@@ -188,7 +202,8 @@ main{
   /* PROPERTIES FOR ODD BOXES */
   &:nth-of-type(even){
     margin-left: auto;
-    background: #A9ABB7;
+    //background: #A9ABB7;
+		background: #e8ebf1;
     &:after{
       margin-right: -9px;
       right: 100%;
@@ -235,15 +250,16 @@ main{
   top: 50%;
   margin-top: -8px;
   .border-radius(50%);
-  border: 2px solid @baseBlue;
-  background: #8e8e8e;
+  //border: 2px solid @baseBlue;
+  //background: #8e8e8e;
+	border: 2px solid #808080;
 
   &:before, &:after{
     content: "";
     position: absolute;
     width: 2px;
     height: 4em;
-    background: @baseBlue;
+    background: #808080;
     left: 5px;
   }
   &:after{
@@ -255,9 +271,9 @@ main{
 }
 
 @keyframes flash {
-    0% {background: rgba(255, 255, 255, 0.2);}
-    50% {background: rgba(200, 200, 200, 1);}
-    100% {background: rgba(255, 255, 255, 0.2);}
+    0% {background: #f0f1f3;}
+    50% {background: darken(#f0f1f3, 20%);}
+    100% {background: #f0f1f3;}
 }
 .animation{
   animation: .8s flash;
@@ -269,7 +285,8 @@ footer{
 	position: relative;
   float: left;
   padding: 2% 4%;
-  background: rgba(255, 255, 255, 0.2);
+  //background: rgba(255, 255, 255, 0.2);
+	background: #f0f1f3;
   border-bottom: 0.2em solid @baseBlue;
 
   & span{
@@ -306,6 +323,8 @@ footer{
 }
 
 
+
+
 /* MOBILE PHONE PORTAIT */
 @media only screen and (min-width : 320px) and (max-width : 460px) {
   .content{
@@ -313,12 +332,16 @@ footer{
   }
   .content p{
     margin: 0;
-    font-size: 1.6em;
+    font-size: 1.2em;
 		line-height: 130%;
   }
   .content h1{
     font-size: 3em;
   }
+	#about{
+		width: 96%;
+		margin: 2%;
+	}
   .tl-box{
     width: 82vw;
     padding: 4%;
@@ -344,6 +367,16 @@ footer{
   }
 }
 
+//Small phones (ie Iphone 5)
+@media only screen and (min-width : 320px) and (max-width : 350px) {
+	.content p{
+    font-size: 1.1em;
+  }
+  .content h1{
+    font-size: 2.5em;
+  }
+}
+
 //Tablet and mobile landscape
 @media only screen and (min-width : 461px) and (max-width : 1024px) {
   nav{
@@ -354,8 +387,12 @@ footer{
   }
 	.content p{
     margin: 0;
-    font-size: 1.6em;
+    font-size: 1.3em;
   }
+	#about{
+		width: 96%;
+		margin: 2%;
+	}
   footer span:nth-of-type(4){
     display: none;
   }
@@ -364,7 +401,7 @@ footer{
 // Desktop
 @media screen and (min-width: 1025px) {
 	body{
-		&:before{
+		/*&:before{
 			content: ' ';
 			position: fixed;
 			width: 100%;
@@ -375,7 +412,7 @@ footer{
 			background-size: cover;
 			will-change: transform;
 			z-index: 0;
-		}
+		}*/
 	}
   nav{
     font-size: 1.75em;

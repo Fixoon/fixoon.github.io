@@ -16,7 +16,7 @@ body {
   font-weight: 300;
   color: #3d3d3d;
   font-size: normal;
-  background: #eee;
+  background: #fff;
 }
 a {
   color: inherit;
@@ -41,7 +41,7 @@ h6 {
   padding: 0;
   font-family: "Roboto";
   font-weight: 300;
-  color: #2E324D;
+  color: #6495ed;
 }
 h1 {
   font-size: 3.895em;
@@ -64,7 +64,7 @@ nav {
   -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
-  background: #23263a;
+  background: #4c4c4c;
 }
 nav a {
   position: relative;
@@ -112,13 +112,28 @@ main {
   padding: 4% 0%;
   color: #4B2F2F;
 }
+#about {
+  background: #6495ed;
+  padding: 3%;
+  margin: 2% 0%;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+#about h1 {
+  color: #fff;
+}
 /* DIVIDER */
 .divider {
   float: left;
   width: 100%;
   height: 2px;
   opacity: 0.5;
-  background: #2E324D;
+  background: #6495ed;
 }
 /* TIMELINE */
 .tl-wrapper {
@@ -141,7 +156,7 @@ main {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  border-bottom: 0.16em solid #2E324D;
+  border-bottom: 0.16em solid #6495ed;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -152,7 +167,7 @@ main {
   /* ARROW FOR THE BOXES */
 }
 .tl-box:nth-of-type(odd) {
-  background: #9da2be;
+  background: #f3f3f3;
 }
 .tl-box:nth-of-type(odd):after {
   margin-left: -9px;
@@ -160,7 +175,7 @@ main {
 }
 .tl-box:nth-of-type(even) {
   margin-left: auto;
-  background: #A9ABB7;
+  background: #e8ebf1;
 }
 .tl-box:nth-of-type(even):after {
   margin-right: -9px;
@@ -208,8 +223,7 @@ main {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  border: 2px solid #2E324D;
-  background: #8e8e8e;
+  border: 2px solid #808080;
 }
 .tl-circle:before,
 .tl-circle:after {
@@ -217,7 +231,7 @@ main {
   position: absolute;
   width: 2px;
   height: 4em;
-  background: #2E324D;
+  background: #808080;
   left: 5px;
 }
 .tl-circle:after {
@@ -228,13 +242,13 @@ main {
 }
 @keyframes flash {
   0% {
-    background: rgba(255, 255, 255, 0.2);
+    background: #f0f1f3;
   }
   50% {
-    background: #c8c8c8;
+    background: #b7bcc6;
   }
   100% {
-    background: rgba(255, 255, 255, 0.2);
+    background: #f0f1f3;
   }
 }
 .animation {
@@ -247,8 +261,8 @@ footer {
   position: relative;
   float: left;
   padding: 2% 4%;
-  background: rgba(255, 255, 255, 0.2);
-  border-bottom: 0.2em solid #2E324D;
+  background: #f0f1f3;
+  border-bottom: 0.2em solid #6495ed;
 }
 footer span {
   float: left;
@@ -287,11 +301,15 @@ footer span a.mail:before {
   }
   .content p {
     margin: 0;
-    font-size: 1.6em;
+    font-size: 1.2em;
     line-height: 130%;
   }
   .content h1 {
     font-size: 3em;
+  }
+  #about {
+    width: 96%;
+    margin: 2%;
   }
   .tl-box {
     width: 82vw;
@@ -315,6 +333,14 @@ footer span a.mail:before {
     display: none;
   }
 }
+@media only screen and (min-width: 320px) and (max-width: 350px) {
+  .content p {
+    font-size: 1.1em;
+  }
+  .content h1 {
+    font-size: 2.5em;
+  }
+}
 @media only screen and (min-width: 461px) and (max-width: 1024px) {
   nav {
     font-size: 1.75em;
@@ -324,24 +350,30 @@ footer span a.mail:before {
   }
   .content p {
     margin: 0;
-    font-size: 1.6em;
+    font-size: 1.3em;
+  }
+  #about {
+    width: 96%;
+    margin: 2%;
   }
   footer span:nth-of-type(4) {
     display: none;
   }
 }
 @media screen and (min-width: 1025px) {
-  body:before {
-    content: ' ';
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url('../images/pattern.svg') no-repeat center center;
-    background-size: cover;
-    will-change: transform;
-    z-index: 0;
+  body {
+    /*&:before{
+			content: ' ';
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: url('../images/pattern.svg') no-repeat center center;
+			background-size: cover;
+			will-change: transform;
+			z-index: 0;
+		}*/
   }
   nav {
     font-size: 1.75em;
