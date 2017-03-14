@@ -76,8 +76,10 @@ nav a {
   cursor: pointer;
   font-weight: 300;
 }
-nav a:hover {
-  color: #7e85b5;
+nav a:hover,
+nav a:focus {
+  color: #6495ed;
+  outline: none;
 }
 .nav-buttons-active {
   color: #ccc !important;
@@ -270,6 +272,11 @@ footer span {
   font-weight: 400;
   margin-right: 20px;
 }
+footer span a:hover,
+footer span a:focus {
+  color: #6495ed;
+  outline: none;
+}
 footer span:nth-of-type(4) {
   float: right;
 }
@@ -282,14 +289,8 @@ footer span a:before {
 footer span a.tw:before {
   content: url('../images/twitter-box.svg');
 }
-footer span a.tw:hover {
-  color: #2E324D;
-}
 footer span a.fb:before {
   content: url('../images/facebook-box.svg');
-}
-footer span a.fb:hover {
-  color: #2E324D;
 }
 footer span a.mail:before {
   content: url('../images/gmail.svg');

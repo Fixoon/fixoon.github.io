@@ -107,8 +107,9 @@ nav{
 		//color: #9da2be;
     cursor: pointer;
     font-weight: 300;
-    &:hover{
-      color: #7e85b5;
+    &:hover, &:focus{
+      color: @baseBlue;
+			outline: none;
     }
   }
 }
@@ -296,6 +297,11 @@ footer{
     font-weight: 400;
     margin-right: 20px;
 
+		& a:hover, a:focus{
+			color: @baseBlue;
+			outline: none;
+		}
+
     &:nth-of-type(4){
       float: right;
     }
@@ -308,14 +314,8 @@ footer{
     & a.tw:before{
       content: url('../images/twitter-box.svg');
     }
-    & a.tw:hover{
-      color: #2E324D;
-    }
     & a.fb:before{
       content: url('../images/facebook-box.svg');
-    }
-    & a.fb:hover{
-      color: #2E324D;
     }
     & a.mail:before{
       content: url('../images/gmail.svg');
