@@ -149,51 +149,47 @@ main {
   text-align: center;
   margin-bottom: 20px;
 }
-@keyframes flashen {
-  0% {
-    bottom: -600px;
-  }
-  100% {
-    bottom: 0;
-  }
+/*@keyframes flashen {
+    0% {margin-top: 600px;}
+    100% {margin-top: 0}
 }
 @keyframes flasheng {
-  0% {
-    top: -560px;
-  }
-  100% {
-    top: 50%;
-  }
+    0% {border-color: #fff;}
+		30% {border-color: #fff;}
+    100% {border-color: #808080;}
 }
-.tl-box:nth-of-type(1) {
-  animation: 1s flashen;
+@keyframes flashenge {
+    0% {background: #fff;}
+		30% {background: #fff;}
+    100% {background: #808080;}
 }
-.tl-box:nth-of-type(1) .tl-circle {
-  animation: 1s flasheng;
-}
-.tl-box:nth-of-type(2) {
-  animation: 1.2s flashen;
-}
-.tl-box:nth-of-type(2) .tl-circle {
-  animation: 1.2s flasheng;
-}
-.tl-box:nth-of-type(3) {
-  animation: 1.4s flashen;
-}
-.tl-box:nth-of-type(3) .tl-circle {
-  animation: 1.4s flasheng;
-}
-.tl-box:nth-of-type(4) {
-  animation: 1.6s flashen;
-}
-.tl-box:nth-of-type(4) .tl-circle {
-  animation: 1.6s flasheng;
-}
-.tl-box:nth-of-type(5) {
-  animation: 1.8s flashen;
-}
-.tl-box:nth-of-type(5) .tl-circle {
-  animation: 1.8s flasheng;
+
+
+.generate-columns(5);
+
+.generate-columns(@n, @i: 1) when (@i =< @n) {
+	.tl-box{
+		&:nth-of-type(@{i}){
+			animation: (0.8s + @i * 0.2s) flashen;
+			.tl-circle{
+				animation: (1.3s + @i * 0.2s) flasheng;
+				&:before, &:after{
+					animation: (1.3s + @i * 0.2s) flashenge;
+				}
+			}
+		}
+	}
+  .generate-columns(@n, (@i + 1));
+}*/
+.tl-line {
+  position: absolute;
+  width: 2px;
+  height: 4em;
+  background: black;
+  top: 0;
+  height: 100%;
+  left: 50%;
+  margin-left: -1px;
 }
 /* TL CONTENT BOX */
 .tl-box {
@@ -373,9 +369,6 @@ footer span a.mail:before {
     margin-right: -9px !important;
     right: 100% !important;
     left: auto !important;
-  }
-  .tl-line {
-    left: 1.8%;
   }
   footer span:nth-of-type(4) {
     display: none;
