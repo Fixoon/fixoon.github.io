@@ -106,6 +106,7 @@ nav a:focus {
 main {
   float: left;
   position: relative;
+  overflow: hidden;
 }
 /* CONTENT DIV */
 .content {
@@ -147,6 +148,52 @@ main {
 .tl {
   text-align: center;
   margin-bottom: 20px;
+}
+@keyframes flashen {
+  0% {
+    bottom: -600px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes flasheng {
+  0% {
+    top: -560px;
+  }
+  100% {
+    top: 50%;
+  }
+}
+.tl-box:nth-of-type(1) {
+  animation: 1s flashen;
+}
+.tl-box:nth-of-type(1) .tl-circle {
+  animation: 1s flasheng;
+}
+.tl-box:nth-of-type(2) {
+  animation: 1.2s flashen;
+}
+.tl-box:nth-of-type(2) .tl-circle {
+  animation: 1.2s flasheng;
+}
+.tl-box:nth-of-type(3) {
+  animation: 1.4s flashen;
+}
+.tl-box:nth-of-type(3) .tl-circle {
+  animation: 1.4s flasheng;
+}
+.tl-box:nth-of-type(4) {
+  animation: 1.6s flashen;
+}
+.tl-box:nth-of-type(4) .tl-circle {
+  animation: 1.6s flasheng;
+}
+.tl-box:nth-of-type(5) {
+  animation: 1.8s flashen;
+}
+.tl-box:nth-of-type(5) .tl-circle {
+  animation: 1.8s flasheng;
 }
 /* TL CONTENT BOX */
 .tl-box {
