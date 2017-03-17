@@ -334,6 +334,8 @@ footer{
 	position: relative;
   float: left;
   padding: 2% 4%;
+	.border-radius;
+	.drop-shadow(0, 2px, 5px, 0, .26);
   //background: rgba(255, 255, 255, 0.2);
 	background: #f0f1f3;
   border-bottom: 0.2em solid @baseBlue;
@@ -342,30 +344,21 @@ footer{
     float: left;
     line-height: 26px;
     font-weight: 400;
-    margin-right: 20px;
+    padding-right: 20px;
 
 		& a:hover, a:focus{
 			color: @baseBlue;
 			outline: none;
 		}
 
-    &:nth-of-type(4){
-      float: right;
-    }
-    & a:before{
-      width: 28px;
+		img{
+			width: 28px;
       height: 28px;
       float: left;
       margin-right: 3px;
-    }
-    & a.tw:before{
-      content: url('../images/twitter-box.svg');
-    }
-    & a.fb:before{
-      content: url('../images/facebook-box.svg');
-    }
-    & a.mail:before{
-      content: url('../images/gmail.svg');
+		}
+    &:nth-of-type(4){
+      float: right;
     }
   }
 }

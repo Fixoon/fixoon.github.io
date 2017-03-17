@@ -306,6 +306,12 @@ footer {
   position: relative;
   float: left;
   padding: 2% 4%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   background: #f0f1f3;
   border-bottom: 0.2em solid #6495ed;
 }
@@ -313,30 +319,21 @@ footer span {
   float: left;
   line-height: 26px;
   font-weight: 400;
-  margin-right: 20px;
+  padding-right: 20px;
 }
 footer span a:hover,
 footer span a:focus {
   color: #6495ed;
   outline: none;
 }
-footer span:nth-of-type(4) {
-  float: right;
-}
-footer span a:before {
+footer span img {
   width: 28px;
   height: 28px;
   float: left;
   margin-right: 3px;
 }
-footer span a.tw:before {
-  content: url('../images/twitter-box.svg');
-}
-footer span a.fb:before {
-  content: url('../images/facebook-box.svg');
-}
-footer span a.mail:before {
-  content: url('../images/gmail.svg');
+footer span:nth-of-type(4) {
+  float: right;
 }
 /* MOBILE PHONE PORTAIT */
 @media only screen and (min-width: 320px) and (max-width: 460px) {
