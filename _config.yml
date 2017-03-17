@@ -1,2 +1,2 @@
 url: https://www.oskarlarsson.me   # with the https protocol
-enforce_ssl: oskarlarsson.me
+enforce_ssl: www.oskarlarsson.me   # without any protocol
