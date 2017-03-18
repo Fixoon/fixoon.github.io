@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
 
-//Less variables
-//@baseBlue: #2E324D;
+//Variables
 @baseBlue: #6495ed;
+
 //Less mixins
 .gradient (@startColor: #eee, @endColor: white) {
 	background-color: @startColor;
@@ -46,7 +46,6 @@ body{
   font-weight: 300;
   color: #3d3d3d;
   font-size: normal;
-  //background: #eee;
 	background: #fff;
 }
 
@@ -81,8 +80,6 @@ h3{
   font-size: 2.125em;
 }
 
-
-
 /* NAVIGATION BUTTONS */
 nav{
   position: relative;
@@ -93,8 +90,6 @@ nav{
   color: black;
   font-size: 6.7vw;
 	.drop-shadow(0, 2px, 5px, 0, .26);
-  //.drop-shadow(0, 12px, 15px, 0, .24);
-  //background: darken(@baseBlue, 6%);
 	background: #4c4c4c;
 
   & a{
@@ -104,7 +99,6 @@ nav{
     margin: 0px 10px;
     padding: 6px 2px;
 		color: #ccc;
-		//color: #9da2be;
     cursor: pointer;
     font-weight: 300;
     &:hover, &:focus{
@@ -112,9 +106,6 @@ nav{
 			outline: none;
     }
   }
-}
-.nav-buttons-active{
-  color: #ccc !important;
 }
 .nav-buttons-divider{
   display: inline-block;
@@ -181,40 +172,6 @@ main{
   text-align: center;
   margin-bottom: 20px;
 }
-
-
-/*@keyframes flashen {
-    0% {margin-top: 600px;}
-    100% {margin-top: 0}
-}
-@keyframes flasheng {
-    0% {border-color: #fff;}
-		30% {border-color: #fff;}
-    100% {border-color: #808080;}
-}
-@keyframes flashenge {
-    0% {background: #fff;}
-		30% {background: #fff;}
-    100% {background: #808080;}
-}
-
-
-.generate-columns(5);
-
-.generate-columns(@n, @i: 1) when (@i =< @n) {
-	.tl-box{
-		&:nth-of-type(@{i}){
-			animation: (0.8s + @i * 0.2s) flashen;
-			.tl-circle{
-				animation: (1.3s + @i * 0.2s) flasheng;
-				&:before, &:after{
-					animation: (1.3s + @i * 0.2s) flashenge;
-				}
-			}
-		}
-	}
-  .generate-columns(@n, (@i + 1));
-}*/
 
 .tl-line{
 	position: absolute;
@@ -299,8 +256,6 @@ main{
   top: 50%;
   margin-top: -8px;
   .border-radius(50%);
-  //border: 2px solid @baseBlue;
-  //background: #8e8e8e;
 	border: 2px solid #808080;
 
   &:before, &:after{
@@ -336,7 +291,6 @@ footer{
   padding: 2% 4%;
 	.border-radius;
 	.drop-shadow(0, 2px, 5px, 0, .26);
-  //background: rgba(255, 255, 255, 0.2);
 	background: #f0f1f3;
   border-bottom: 0.2em solid @baseBlue;
 
@@ -389,10 +343,8 @@ footer{
     margin: 0 0 6% auto;
   }
   .tl-circle{
-    //right: 109.89% !important;
 		right: 89vw !important;
 		left: auto !important;
-    //margin-right: -16px !important;
 		margin-right: -8px !important;
   }
   .tl-box:after{
@@ -438,20 +390,6 @@ footer{
 
 // Desktop
 @media screen and (min-width: 1025px) {
-	body{
-		/*&:before{
-			content: ' ';
-			position: fixed;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			background: url('../images/pattern.svg') no-repeat center center;
-			background-size: cover;
-			will-change: transform;
-			z-index: 0;
-		}*/
-	}
   nav{
     font-size: 1.75em;
   }
