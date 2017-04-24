@@ -11,30 +11,28 @@
 </head>
 <body>
 	<nav>
-		<a href="index.html">Larsson</a>
+		<a href="">Larsson</a>
 		<div class="nav-buttons-divider"></div>
-		<a class="nav-buttons-active">Projekt</a>
+		<a class="nav-buttons-disabled" title="Kommer snart">Projekt</a>
 		<div class="nav-buttons-divider"></div>
-		<a href="#footer">Kontakt</a>
+		<a href="javascript:undefined" id="contact">Kontakt</a>
 	</nav>
 	<div class="box-wrap">
 		<main>
 			<div class="content" id="project">
 				<h2>Projekt</h2>
-				<div class="project">
+				<div class="project" data-value="proj_1">
 					<h3>Projekt #1</h3>
 					<p id="testTagg">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum
-						sapien neque, sed mattis ipsum interdum et. Aenean metus sapien,
-						varius sed eros vitae, tristique fringilla libero. Integer
-						pellentesque, augue vel tempor mollis, ex purus viverra dui, id
-						convallis massa.
+						Detta är en lite kortare beskrivning om ett projekt. Trycker man på
+						"Visa mer" får man upp en ruta med mer info. Det är bara att testa.
+						Tryck på den vita texten nere i högra hörnet.
 					</p>
 					<div class="more-info">
 						<a class="moreinfo">Mer info</a>
 					</div>
 				</div>
-				<div class="project">
+				<div class="project" data-value="proj_2">
 					<h3>Projekt #2</h3>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas
@@ -45,7 +43,7 @@
 						<a class="moreinfo">Mer info</a>
 					</div>
 				</div>
-				<div class="project">
+				<div class="project" data-value="proj_3">
 					<h3>Projekt #3</h3>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit
@@ -85,24 +83,25 @@
 	<script>
 		var moreInfo = $(".moreinfo");
 		moreInfo.click(function () {
-			var newText2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum sapien neque, sed mattis ipsum interdum et. Aenean metus sapien, varius sed eros vitae, tristique fringilla libero. Integer pellentesque, augue vel tempor mollis, ex purus viverra dui, id convallis massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum sapien neque, sed mattis ipsum interdum et. Aenean metus sapien, varius sed eros vitae, tristique fringilla libero. Integer pellentesque, augue vel tempor mollis, ex purus viverra dui, id convallis massa."
-
-			var newText;
-			$.ajax({
-						url : "projects/proj_one.txt",
-						dataType: "text",
-						success : function (data) {
-								newText = data;
-						}
-				});
-
-			var projDiv = $(this).parent().parent();
+			var thisGuy = $(this);
+			var fileName = (thisGuy.parent().parent()).data("value");
+				$.ajax({
+	          url : "projects/" + fileName + ".txt",
+	          dataType: "text",
+	          success : function (data) {
+              popUp(data, thisGuy);
+	          }
+	      });
+	  });
+		function popUp(popUpText, thisGuy){
+			var newText = popUpText;
+			var projDiv = thisGuy.parent().parent();
 			var scrollTop = $(window).scrollTop();
 			var winWidth = $(window).width();
 			var newDiv = projDiv.clone();
 			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 				var left = (($(window).width() / 2) - ((winWidth * 0.96) / 2));
-				var animWidth = "96%";
+				var animWidth = (winWidth * 0.96);
 			}else{
 				var left = (($(window).width() / 2) - ("600" / 2));
 				var animWidth = "600px";
@@ -128,6 +127,7 @@
 
 
 			var testDiv = newDiv.find("p");
+			testDiv.css("margin", "0");
 			testDiv.text(newText);
 
 			newDiv.css("height", "auto").css("width", "600px");
@@ -147,14 +147,14 @@
 			});
 
 			newDiv.animate({
-				top: top,
+		    top: top,
 				left: left,
 				width: animWidth,
 				height: newHight
-			}, 500, function() {
+		  }, 500, function() {
 				testDiv.text(newText);
 			});
-		});
+		}
 	</script>
 </body>
 </html>

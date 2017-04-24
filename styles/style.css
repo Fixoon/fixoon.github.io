@@ -251,7 +251,6 @@ main {
 }
 .project {
   width: 32%;
-  min-height: 200px;
   float: left;
   background: #6495ed;
   margin: 0 1%;
