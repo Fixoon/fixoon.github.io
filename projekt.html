@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!-- Feel free to take inspiration from my website but please don't copy the whole thing -->
+	<meta charset='utf-8'>
+	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+	<title>Oskar Larsson</title>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+<body>
+	<nav>
+		<a href="index.html">Larsson</a>
+		<div class="nav-buttons-divider"></div>
+		<a class="nav-buttons-active">Projekt</a>
+		<div class="nav-buttons-divider"></div>
+		<a href="#footer">Kontakt</a>
+	</nav>
+	<div class="box-wrap">
+		<main>
+			<div class="content" id="project">
+				<h2>Projekt</h2>
+				<div class="project">
+					<h3>Projekt #1</h3>
+					<p id="testTagg">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum
+						sapien neque, sed mattis ipsum interdum et. Aenean metus sapien,
+						varius sed eros vitae, tristique fringilla libero. Integer
+						pellentesque, augue vel tempor mollis, ex purus viverra dui, id
+						convallis massa.
+					</p>
+					<div class="more-info">
+						<a class="moreinfo">Mer info</a>
+					</div>
+				</div>
+				<div class="project">
+					<h3>Projekt #2</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas
+						congue erat a auctor. Curabitur nec massa facilisis, efficitur erat
+						et, fringilla erat. Etiam.
+					</p>
+					<div class="more-info">
+						<a class="moreinfo">Mer info</a>
+					</div>
+				</div>
+				<div class="project">
+					<h3>Projekt #3</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit
+						turpis, faucibus ut sem eget, luctus consequat ante. Duis eget ante
+						dui. Praesent malesuada ipsum convallis sapien pulvinar, tincidunt
+						pellentesque elit auctor.
+					</p>
+					<div class="more-info">
+						<a class="moreinfo">Mer info</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer id="footer">
+			<span>
+				<img src="images/twitter-box.svg" width="28" height="28" alt="Twitter icon" />
+				<a href="http://www.twitter.com/oskaaarl" target="_blank" class="tw">@oskaaarl</a>
+			</span>
+			<span>
+				<img src="images/facebook-box.svg" width="28" height="28" alt="Facebook icon" />
+				<a href="http://www.facebook.com/OskarjsL" target="_blank" class="fb">/OskarjsL</a>
+			</span>
+			<span>
+				<img src="images/gmail.svg" width="28" height="28" alt="Gmail icon" />
+				<span class="mail">
+				<noscript>Enable JS to show email</noscript>
+				<script type="text/javascript">
+					var first = "oskar.larsson94";
+					var last = "gmail.com";
+					document.write(first + '@' + last);
+				</script>
+				</span>
+			</span>
+			<span>Sidan skapad av Oskar Larsson</span>
+		</footer>
+	</div>
+	<script>
+		var moreInfo = $(".moreinfo");
+		moreInfo.click(function () {
+			var newText2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum sapien neque, sed mattis ipsum interdum et. Aenean metus sapien, varius sed eros vitae, tristique fringilla libero. Integer pellentesque, augue vel tempor mollis, ex purus viverra dui, id convallis massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum sapien neque, sed mattis ipsum interdum et. Aenean metus sapien, varius sed eros vitae, tristique fringilla libero. Integer pellentesque, augue vel tempor mollis, ex purus viverra dui, id convallis massa."
+
+			var newText;
+			$.ajax({
+						url : "projects/proj_one.txt",
+						dataType: "text",
+						success : function (data) {
+								newText = data;
+						}
+				});
+
+			var projDiv = $(this).parent().parent();
+			var scrollTop = $(window).scrollTop();
+			var winWidth = $(window).width();
+			var newDiv = projDiv.clone();
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				var left = (($(window).width() / 2) - ((winWidth * 0.96) / 2));
+				var animWidth = "96%";
+			}else{
+				var left = (($(window).width() / 2) - ("600" / 2));
+				var animWidth = "600px";
+			}
+			var top = (($(window).height() / 2) - (projDiv.outerHeight() / 2));
+			var height = projDiv.outerHeight();
+			var width = projDiv.outerWidth();
+
+			newDiv.appendTo(projDiv.parent());
+
+			newDiv.find(".more-info").remove();
+
+			newDiv.css("padding", newDiv.css("padding"));
+			newDiv.css("width", newDiv.outerWidth());
+			newDiv.css("height", newDiv.outerHeight());
+
+			newDiv.css("top", (projDiv.offset().top - scrollTop))
+			.css("left", Math.round(projDiv.offset().left))
+			.css("margin", "0")
+			.css("position", "fixed")
+			.css("z-index", "999")
+			.css("max-width", "96%");
+
+
+			var testDiv = newDiv.find("p");
+			testDiv.text(newText);
+
+			newDiv.css("height", "auto").css("width", "600px");
+			var newHight = newDiv.outerHeight();
+			newDiv.css("height", height).css("width", width);
+
+			testDiv.text("");
+
+			projDiv.css("opacity", "0");
+
+			$("<div id='popUpBackground'></div>").appendTo("body");
+			$("#popUpBackground").css("position", "fixed").css("width", "100%").css("height", "100%").css("background", "rgba(0,0,0,0.7)").css("top", "0").css("left", "0");
+			$("#popUpBackground").click(function (){
+				$("#popUpBackground").remove();
+				newDiv.remove();
+				projDiv.css("opacity", "1");
+			});
+
+			newDiv.animate({
+				top: top,
+				left: left,
+				width: animWidth,
+				height: newHight
+			}, 500, function() {
+				testDiv.text(newText);
+			});
+		});
+	</script>
+</body>
+</html>

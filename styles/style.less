@@ -59,7 +59,7 @@ b{
 }
 p{
   margin: 0;
-  font-size: 2em;
+  font-size: 1.75em;
 }
 
 /* HEADER PROPERTIES */
@@ -71,7 +71,7 @@ h1,h2,h3,h4,h5,h6 {
   color: #737373;
 }
 h1{
-  font-size: 3.895em;
+  font-size: 3.5em;
 }
 h2{
   font-size: 3.750em;
@@ -136,14 +136,14 @@ main{
 .content{
   width: 100%;
   height: auto;
-  padding: 4% 0%;
+  margin: 2% 0;
   color: #4B2F2F;
+	float: left;
 }
 
 #about{
 	background: @baseBlue;
 	padding: 3%;
-	margin: 2% 0%;
 	color: #fff;
 	.border-radius;
 	.drop-shadow(0, 2px, 5px, 0, .26);
@@ -166,7 +166,6 @@ main{
   position: relative;
   height: auto;
   margin: 0 auto;
-  z-index: 1;
 }
 .tl{
   text-align: center;
@@ -190,7 +189,7 @@ main{
   width: 45.5%;
   height: auto;
   padding: 2.2%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   .border-radius(2px);
   border-bottom: 0.16em solid @baseBlue;
   .drop-shadow(0, 2px, 5px, 0, .26);
@@ -274,6 +273,54 @@ main{
   }
 }
 
+
+//Project
+.project{
+	width: 32%;
+	min-height: 200px;
+	float: left;
+	background: @baseBlue;
+	margin: 0 1%;
+	padding: 2%;
+	.border-radius;
+	.drop-shadow(0, 2px, 5px, 0, .26);
+	&:nth-of-type(1){
+		margin-left: 0;
+	}
+	&:nth-of-type(3){
+		margin-right: 0;
+	}
+	img{
+		max-width: 100%;
+		.border-radius(2px);
+	}
+	h3{
+		color: white;
+	}
+	p{
+		font-size: 1.125em;
+		margin-bottom: 4%;
+	}
+	.more-info{
+		width: 100%;
+		height: auto;
+		& a{
+			float: right;
+			font-weight: 700;
+			color: white;
+			cursor: pointer;
+		}
+	}
+}
+
+#project h2{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+
+
+
 @keyframes flash {
     0% {background: #f0f1f3;}
     50% {background: darken(#f0f1f3, 20%);}
@@ -293,6 +340,7 @@ footer{
 	.drop-shadow(0, 2px, 5px, 0, .26);
 	background: #f0f1f3;
   border-bottom: 0.2em solid @baseBlue;
+	z-index: -1;
 
   & span{
     float: left;
@@ -355,6 +403,18 @@ footer{
   footer span:nth-of-type(4){
     display: none;
   }
+
+	.project{
+		width: 96%;
+		margin: 2%;
+		padding: 4%;
+		&:nth-of-type(1){
+			margin-left: 2%;
+		}
+		&:nth-of-type(3){
+			margin-right: 2%;
+		}
+	}
 }
 
 //Small phones (ie Iphone 5)

@@ -28,7 +28,7 @@ b {
 }
 p {
   margin: 0;
-  font-size: 2em;
+  font-size: 1.75em;
 }
 /* HEADER PROPERTIES */
 h1,
@@ -44,7 +44,7 @@ h6 {
   color: #737373;
 }
 h1 {
-  font-size: 3.895em;
+  font-size: 3.5em;
 }
 h2 {
   font-size: 3.750em;
@@ -109,13 +109,13 @@ main {
 .content {
   width: 100%;
   height: auto;
-  padding: 4% 0%;
+  margin: 2% 0;
   color: #4B2F2F;
+  float: left;
 }
 #about {
   background: #6495ed;
   padding: 3%;
-  margin: 2% 0%;
   color: #fff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -140,7 +140,6 @@ main {
   position: relative;
   height: auto;
   margin: 0 auto;
-  z-index: 1;
 }
 .tl {
   text-align: center;
@@ -162,7 +161,7 @@ main {
   width: 45.5%;
   height: auto;
   padding: 2.2%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -250,6 +249,53 @@ main {
 .tl-circle:before {
   bottom: 14px;
 }
+.project {
+  width: 32%;
+  min-height: 200px;
+  float: left;
+  background: #6495ed;
+  margin: 0 1%;
+  padding: 2%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+.project:nth-of-type(1) {
+  margin-left: 0;
+}
+.project:nth-of-type(3) {
+  margin-right: 0;
+}
+.project img {
+  max-width: 100%;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.project h3 {
+  color: white;
+}
+.project p {
+  font-size: 1.125em;
+  margin-bottom: 4%;
+}
+.project .more-info {
+  width: 100%;
+  height: auto;
+}
+.project .more-info a {
+  float: right;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+#project h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 @keyframes flash {
   0% {
     background: #f0f1f3;
@@ -279,6 +325,7 @@ footer {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   background: #f0f1f3;
   border-bottom: 0.2em solid #6495ed;
+  z-index: -1;
 }
 footer span {
   float: left;
@@ -334,6 +381,17 @@ footer span:nth-of-type(4) {
   }
   footer span:nth-of-type(4) {
     display: none;
+  }
+  .project {
+    width: 96%;
+    margin: 2%;
+    padding: 4%;
+  }
+  .project:nth-of-type(1) {
+    margin-left: 2%;
+  }
+  .project:nth-of-type(3) {
+    margin-right: 2%;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 350px) {
