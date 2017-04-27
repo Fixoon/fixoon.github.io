@@ -298,11 +298,12 @@ main{
 	}
 	p{
 		font-size: 1.125em;
-		margin-bottom: 4%;
+		overflow-y: hidden;
 	}
 	.more-info{
 		width: 100%;
 		height: auto;
+		margin-top: 2%;
 		& a{
 			float: right;
 			font-weight: 700;
@@ -312,11 +313,27 @@ main{
 	}
 }
 
+
 #project h2{
 	text-align: center;
 	margin-bottom: 20px;
 }
 
+#popUpBackground{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	top: 0;
+	left: 0;
+}
+
+
+.testAnimation{
+	transition-property: left, top, width, height, transform;
+	transition-duration: 20.4s;
+	transition-timing-function: ease;
+}
 
 
 
@@ -466,4 +483,7 @@ footer{
   footer{
     margin-bottom: 3%;
   }
+	.project{
+		max-width: 600px;
+	}
 }

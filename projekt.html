@@ -80,81 +80,20 @@
 			<span>Sidan skapad av Oskar Larsson</span>
 		</footer>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script>
-		var moreInfo = $(".moreinfo");
-		moreInfo.click(function () {
-			var thisGuy = $(this);
-			var fileName = (thisGuy.parent().parent()).data("value");
-				$.ajax({
-	          url : "projects/" + fileName + ".txt",
-	          dataType: "text",
-	          success : function (data) {
-              popUp(data, thisGuy);
-	          }
-	      });
-	  });
-		function popUp(popUpText, thisGuy){
-			var newText = popUpText;
-			var projDiv = thisGuy.parent().parent();
-			var scrollTop = $(window).scrollTop();
-			var winWidth = $(window).width();
-			var newDiv = projDiv.clone();
-			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-				var left = (($(window).width() / 2) - ((winWidth * 0.96) / 2));
-				var animWidth = (winWidth * 0.96);
-			}else{
-				var left = (($(window).width() / 2) - ("600" / 2));
-				var animWidth = "600px";
-			}
-			var top = (($(window).height() / 2) - (projDiv.outerHeight() / 2));
-			var height = projDiv.outerHeight();
-			var width = projDiv.outerWidth();
-
-			newDiv.appendTo(projDiv.parent());
-
-			newDiv.find(".more-info").remove();
-
-			newDiv.css("padding", newDiv.css("padding"));
-			newDiv.css("width", newDiv.outerWidth());
-			newDiv.css("height", newDiv.outerHeight());
-
-			newDiv.css("top", (projDiv.offset().top - scrollTop))
-			.css("left", Math.round(projDiv.offset().left))
-			.css("margin", "0")
-			.css("position", "fixed")
-			.css("z-index", "999")
-			.css("max-width", "96%");
-
-
-			var testDiv = newDiv.find("p");
-			testDiv.css("margin", "0");
-			testDiv.text(newText);
-
-			newDiv.css("height", "auto").css("width", "600px");
-			var newHight = newDiv.outerHeight();
-			newDiv.css("height", height).css("width", width);
-
-			testDiv.text("");
-
-			projDiv.css("opacity", "0");
-
-			$("<div id='popUpBackground'></div>").appendTo("body");
-			$("#popUpBackground").css("position", "fixed").css("width", "100%").css("height", "100%").css("background", "rgba(0,0,0,0.7)").css("top", "0").css("left", "0");
-			$("#popUpBackground").click(function (){
-				$("#popUpBackground").remove();
-				newDiv.remove();
-				projDiv.css("opacity", "1");
+		var myButton = $('#contact'), myBox = $('footer');
+		myButton.click(function () {
+			$("html, body").scrollTop($(document).height());
+			myBox.addClass('animation');
+			myBox.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+			function(e) {
+				myBox.removeClass('animation');
 			});
-
-			newDiv.animate({
-		    top: top,
-				left: left,
-				width: animWidth,
-				height: newHight
-		  }, 500, function() {
-				testDiv.text(newText);
-			});
-		}
+		});
 	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+	<script src="scripts/modal.js"></script>
 </body>
 </html>
