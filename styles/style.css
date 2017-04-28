@@ -28,7 +28,7 @@ b {
 }
 p {
   margin: 0;
-  font-size: 1.75em;
+  font-size: 1.55em;
 }
 /* HEADER PROPERTIES */
 h1,
@@ -255,6 +255,7 @@ main {
   background: #6495ed;
   margin: 0 1%;
   padding: 2%;
+  overflow: hidden;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -330,6 +331,7 @@ footer {
   position: relative;
   float: left;
   padding: 2% 4%;
+  margin-top: 2%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;

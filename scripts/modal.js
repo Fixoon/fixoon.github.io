@@ -7,14 +7,13 @@ moreInfo.click(function () {
         url : "projects/" + fileName + ".txt",
         dataType: "text",
         success : function (data) {
-          popUp(data, projectDiv);
+          popUp($.parseHTML(data), projectDiv);
         }
     });
 });
 
 function popUp(popUpText, projectDiv){
   var newText = popUpText;
-
   //Project Div variables
   var projDiv = projectDiv.parent().parent();
   var clonedDiv = projDiv.clone().appendTo(projDiv.parent());
@@ -42,13 +41,12 @@ function popUp(popUpText, projectDiv){
 
   //Set text in P to the final text to calculate final height and reset
   var clonedDivP = clonedDiv.find("p");
-  clonedDivP.text(newText);
+  clonedDivP.html(newText);
   clonedDiv.css("height", "auto").css("width", "100%");
   var newWidth = clonedDiv.outerWidth();
   var newHight = clonedDiv.outerHeight();
   clonedDiv.css("height", height).css("width", width);
   clonedDivP.css("display", "none");
-
   //Add a background to the modal
   $("<div id='popUpBackground'></div>").appendTo("body");
   $("#popUpBackground").click(function (){
@@ -59,7 +57,14 @@ function popUp(popUpText, projectDiv){
 
   projDiv.css("opacity", "0");
 
-  TweenLite.to(clonedDiv, 0.4, {top: "50%", left: "50%", marginTop: -(newHight/2), marginLeft: -(newWidth/2), width: newWidth, height: newHight, onComplete:completeFunc, onCompleteParams:[clonedDivP]});
+  setTimeout(function(){
+    clonedDiv.css("transition-property", "left, margin-left, top, margin-top, width, height").css("transition-duration", "7.4s");
+    clonedDiv.css("top", "50%").css("left", "50%").css("margin-top", -(newHight/2)).css("margin-left", -(newWidth/2)).css("width", newWidth).css("height", newHight);
+  }, 0);
+
+  clonedDiv.one("transitionend", function() {
+      clonedDivP.css("display", "block");
+  });
 
   function completeFunc(paragraph) {
     clonedDivP.css("display", "block");
