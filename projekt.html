@@ -113,6 +113,7 @@
 						var testvar = $(".project-wrap").height();
 						$(".project-wrap").css("height", testHeight);
 						setTimeout(function(){
+							$(".project-wrap").css("height");
 							$(".project-wrap").addClass("wrap-animation");
 							$(".project-wrap").css("height", testvar);
 						}, 0);
