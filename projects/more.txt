@@ -1,5 +1,5 @@
 ﻿			<div class="project" data-value="proj_1">
-				<h3>Philips portfolio</h3>
+				<h3>Projekt #4</h3>
 				<p>
 				Detta är en lite kortare beskrivning om ett projekt. Trycker man på
 				"Visa mer" får man upp mer info.
@@ -9,7 +9,7 @@
 				</div>
 			</div>
 			<div class="project" data-value="proj_1">
-				<h3>Infoskärm</h3>
+				<h3>Projekt #5</h3>
 				<p>
 				Detta är en lite kortare beskrivning om ett projekt. Trycker man på
 				"Visa mer" får man upp mer info.
