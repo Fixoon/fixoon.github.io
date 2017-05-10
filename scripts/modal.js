@@ -38,6 +38,8 @@ function popUp(popUpText, projectDiv){
   .css("position", "fixed")
   .css("z-index", "999");
 
+  console.log(clonedDiv.css("width"));
+
 
   //Set text in P to the final text to calculate final height and reset
   var clonedDivP = clonedDiv.find("p");
@@ -61,6 +63,7 @@ function popUp(popUpText, projectDiv){
   projDiv.css("opacity", "0");
 
   setTimeout(function(){
+    console.log(clonedDiv.css("width"));
     clonedDiv.addClass("test-animation");
     //clonedDiv.css("transition-property", "left, margin-left, top, margin-top, width, height").css("transition-duration", ".4s");
     clonedDiv.css("top", "50%").css("left", "50%").css("margin-top", -(newHight/2)).css("margin-left", -(newWidth/2)).css("width", newWidth).css("height", newHight);

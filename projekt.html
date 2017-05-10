@@ -107,7 +107,6 @@
 					dataType: "text",
 					success : function (data) {
 						console.log($.parseHTML(data));
-						expandThis.fadeOut();
 						var newDiv = $('<div/>').html($.parseHTML(data)).contents();
 						var testHeight = $(".project-wrap").outerHeight();
 						$(".project-wrap").append(newDiv);
@@ -119,6 +118,7 @@
 						}, 0);
 						setTimeout(function(){
 							$(".project-wrap").css("height", "auto");
+							expandThis.slideUp();
 						}, 800);
 						var moreInfo = $(".moreinfo");
 						moreInfo.unbind("click");
