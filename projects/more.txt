@@ -1,0 +1,20 @@
+﻿			<div class="project" data-value="proj_1">
+				<h3>Philips portfolio</h3>
+				<p>
+					En kompis till mig är efterbliven och kan inte skapa en egen portfolio,
+					därför gjorde jag den åt honom.
+				</p>
+				<div class="more-info">
+					<a href="javascript:undefined" class="moreinfo">Mer info</a>
+				</div>
+			</div>
+			<div class="project" data-value="proj_1">
+				<h3>Infoskärm</h3>
+				<p>
+					Gjorde en infoskärm till mig själv att ha hemma. Visar info som väder
+					och kalander. Raspberry PI som server.
+				</p>
+				<div class="more-info">
+					<a href="javascript:undefined" class="moreinfo">Mer info</a>
+				</div>
+			</div>

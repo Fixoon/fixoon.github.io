@@ -1,7 +1,7 @@
-var moreInfo = $(".moreinfo");
 
-moreInfo.click(function () {
-  var projectDiv = $(this);
+
+function getData(div){
+  var projectDiv = div;
   var fileName = (projectDiv.parent().parent()).data("value");
     $.ajax({
         url : "projects/" + fileName + ".txt",
@@ -10,7 +10,7 @@ moreInfo.click(function () {
           popUp($.parseHTML(data), projectDiv);
         }
     });
-});
+}
 
 function popUp(popUpText, projectDiv){
   var newText = popUpText;
@@ -45,28 +45,28 @@ function popUp(popUpText, projectDiv){
   clonedDiv.css("height", "auto").css("width", "100%");
   var newWidth = clonedDiv.outerWidth();
   var newHight = clonedDiv.outerHeight();
+  if(clonedDiv.height() + 2 < (clonedDivP.height() + clonedDiv.find("h3").height())){
+    clonedDivP.css("max-height", (clonedDiv.height() - clonedDiv.find("h3").height()));
+  }
   clonedDiv.css("height", height).css("width", width);
   clonedDivP.css("display", "none");
   //Add a background to the modal
-  $("<div id='popUpBackground'></div>").appendTo("body");
-  $("#popUpBackground").click(function (){
-    $("#popUpBackground").remove();
+  $("<div id='popup-background'></div>").appendTo("body");
+  $("<div id='modal-exit'><a href='javascript:undefined'></a></div>").appendTo(clonedDiv);
+  $("#popup-background, #modal-exit").click(function (){
+    $("#popup-background").remove();
     clonedDiv.remove();
     projDiv.css("opacity", "1");
   });
-
   projDiv.css("opacity", "0");
 
   setTimeout(function(){
-    clonedDiv.css("transition-property", "left, margin-left, top, margin-top, width, height").css("transition-duration", "7.4s");
+    clonedDiv.addClass("test-animation");
+    //clonedDiv.css("transition-property", "left, margin-left, top, margin-top, width, height").css("transition-duration", ".4s");
     clonedDiv.css("top", "50%").css("left", "50%").css("margin-top", -(newHight/2)).css("margin-left", -(newWidth/2)).css("width", newWidth).css("height", newHight);
   }, 0);
 
   clonedDiv.one("transitionend", function() {
       clonedDivP.css("display", "block");
   });
-
-  function completeFunc(paragraph) {
-    clonedDivP.css("display", "block");
-  }
 }

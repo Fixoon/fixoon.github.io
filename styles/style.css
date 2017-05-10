@@ -28,7 +28,7 @@ b {
 }
 p {
   margin: 0;
-  font-size: 1.55em;
+  font-size: 1.125em;
 }
 /* HEADER PROPERTIES */
 h1,
@@ -127,6 +127,9 @@ main {
 #about h1 {
   color: #fff;
 }
+#about p {
+  font-size: 1.5em;
+}
 /* DIVIDER */
 .divider {
   float: left;
@@ -141,9 +144,9 @@ main {
   height: auto;
   margin: 0 auto;
 }
-.tl {
+#timeline h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .tl-line {
   position: absolute;
@@ -252,10 +255,11 @@ main {
 .project {
   width: 32%;
   float: left;
-  background: #6495ed;
-  margin: 0 1%;
+  background: #f3f3f3;
+  margin: 1% 1%;
   padding: 2%;
   overflow: hidden;
+  max-height: 99%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -263,10 +267,10 @@ main {
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
-.project:nth-of-type(1) {
+.project:nth-of-type(3n + 1) {
   margin-left: 0;
 }
-.project:nth-of-type(3) {
+.project:nth-of-type(3n + 3) {
   margin-right: 0;
 }
 .project img {
@@ -274,13 +278,14 @@ main {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
+  border: 2px solid black;
+  object-fit: contain;
 }
 .project h3 {
-  color: white;
+  color: #6495ed;
 }
 .project p {
-  font-size: 1.125em;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 .project .more-info {
   width: 100%;
@@ -290,14 +295,34 @@ main {
 .project .more-info a {
   float: right;
   font-weight: 700;
-  color: white;
+  color: #6495ed;
   cursor: pointer;
+}
+.expand {
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  color: black;
+  font-weight: 400;
+  font-size: 1.750em;
+}
+.expand:hover {
+  cursor: pointer;
+}
+.project-wrap {
+  float: left;
+  overflow: hidden;
+}
+.wrap-animation {
+  transition: height 0.8s;
 }
 #project h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-#popUpBackground {
+#popup-background {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -305,10 +330,23 @@ main {
   top: 0;
   left: 0;
 }
-.testAnimation {
-  transition-property: left, top, width, height, transform;
-  transition-duration: 20.4s;
-  transition-timing-function: ease;
+#modal-exit {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: url(../images/close.svg);
+  cursor: pointer;
+}
+#modal-exit a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.test-animation {
+  transition-property: left, margin-left, top, margin-top, width, height;
+  transition-duration: 0.4s;
 }
 @keyframes flash {
   0% {
@@ -369,15 +407,21 @@ footer span:nth-of-type(4) {
   }
   .content p {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.125em;
     line-height: 130%;
   }
   .content h1 {
     font-size: 3em;
   }
+  .content h2 {
+    font-size: 2.75em;
+  }
   #about {
     width: 96%;
     margin: 2%;
+  }
+  #about p {
+    font-size: 1.125em;
   }
   .tl-box {
     width: 82vw;
@@ -399,14 +443,18 @@ footer span:nth-of-type(4) {
   }
   .project {
     width: 96%;
+    max-width: 98%;
     margin: 2%;
     padding: 4%;
   }
-  .project:nth-of-type(1) {
+  .project:nth-of-type(3n + 1) {
     margin-left: 2%;
   }
-  .project:nth-of-type(3) {
+  .project:nth-of-type(3n + 3) {
     margin-right: 2%;
+  }
+  .project p {
+    font-size: 1.125em;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 350px) {
@@ -426,11 +474,16 @@ footer span:nth-of-type(4) {
   }
   .content p {
     margin: 0;
-    font-size: 1.3em;
+    font-size: 1.250em;
   }
   #about {
     width: 96%;
     margin: 2%;
+  }
+  .project {
+    width: 100%;
+    max-width: 98%;
+    margin: 1% 0;
   }
   footer span:nth-of-type(4) {
     display: none;
