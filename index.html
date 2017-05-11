@@ -20,15 +20,15 @@
 		<div class="content" id="about">
 			<h1><b>Oskar Larsson</b></h1>
 			<p>
-				En student som läser programmering på <b>Uppsala Universitet i Visby.</b>
+				Jag är en student som läser webbprog på <b>Uppsala Universitet i Visby.</b>
 				Det här är bara början på min personliga sida. Tanken är att det ska dyka
 				upp projekt och annat roligt jag har gjort här framöver men för tillfället utvecklar
 				jag bara sidan för skojs skull.
 			</p>
 		</div>
 		<div class="div2ider"></div>
-		<div class="content">
-			<h2 class="tl">Tidslinje</h2>
+		<div class="content" id="timeline">
+			<h2>Tidslinje</h2>
 			<div class="tl-wrapper">
 
 				<div class="tl-box">
@@ -58,6 +58,7 @@
 				</div>
 			</div>
 		</div>
+		
 		</main>
 		<footer id="footer">
 			<span>
@@ -79,7 +80,7 @@
 				</script>
 				</span>
 			</span>
-			<span>Sidan skapad av Oskar Larsson</span>
+			<span>Copyright Oskar Larsson</span>
 		</footer>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -91,6 +92,43 @@
 			myBox.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
 			function(e) {
 				myBox.removeClass('animation');
+			});
+		});
+	</script>
+	<script src="scripts/modal.js"></script>
+	<script>
+		var moreInfo = $(".moreinfo");
+
+		moreInfo.click(function () {
+		  getData($(this));
+		});
+		$(".expand").click(function(){
+			var expandThis = $(this);
+			$.ajax({
+					url : "projects/more.txt",
+					dataType: "text",
+					success : function (data) {
+						console.log($.parseHTML(data));
+						var newDiv = $('<div/>').html($.parseHTML(data)).contents();
+						var testHeight = $(".project-wrap").outerHeight();
+						$(".project-wrap").append(newDiv);
+						var testvar = $(".project-wrap").height();
+						$(".project-wrap").css("height", testHeight);
+						setTimeout(function(){
+							$(".project-wrap").css("height");
+							$(".project-wrap").addClass("wrap-animation");
+							$(".project-wrap").css("height", testvar);
+						}, 0);
+						setTimeout(function(){
+							$(".project-wrap").css("height", "auto");
+							expandThis.slideUp();
+						}, 800);
+						var moreInfo = $(".moreinfo");
+						moreInfo.unbind("click");
+						moreInfo.click(function () {
+							getData($(this));
+						});
+					}
 			});
 		});
 	</script>
