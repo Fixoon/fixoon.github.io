@@ -54,7 +54,8 @@
 					</div>
 				</div>
 				<div class="expand">
-					<a href="javascript:undefined">Se alla projekt</a>
+					<a href="javascript:undefined" id="expand-toggle">Se alla projekt</a>
+					<img src="images/arrow-down.svg" id="expand-toggle-img" />
 				</div>
 			</div>
 		</main>
@@ -96,39 +97,62 @@
 	<script src="scripts/modal.js"></script>
 	<script>
 		var moreInfo = $(".moreinfo");
-
+		var isExpanded = false;
+		var filesLoaded = false;
 		moreInfo.click(function () {
 		  getData($(this));
 		});
 		$(".expand").click(function(){
 			var expandThis = $(this);
+			if(isExpanded){
+				isExpanded = false;
+				contractDivs();
+				$("#expand-toggle").text("Visa alla projekt");
+				$("#expand-toggle-img").attr("src", "images/arrow-down.svg")
+			}else{
+				isExpanded = true;
+				getProjects();
+				$("#expand-toggle").text("Dölj projekt");
+				$("#expand-toggle-img").attr("src", "images/arrow-up.svg")
+			}
+		});
+		function getProjects(){
 			$.ajax({
 					url : "projects/more.txt",
 					dataType: "text",
 					success : function (data) {
-						console.log($.parseHTML(data));
 						var newDiv = $('<div/>').html($.parseHTML(data)).contents();
-						var testHeight = $(".project-wrap").outerHeight();
-						$(".project-wrap").append(newDiv);
-						var testvar = $(".project-wrap").height();
-						$(".project-wrap").css("height", testHeight);
-						setTimeout(function(){
-							$(".project-wrap").css("height");
-							$(".project-wrap").addClass("wrap-animation");
-							$(".project-wrap").css("height", testvar);
-						}, 0);
-						setTimeout(function(){
-							$(".project-wrap").css("height", "auto");
-							expandThis.slideUp();
-						}, 800);
-						var moreInfo = $(".moreinfo");
-						moreInfo.unbind("click");
-						moreInfo.click(function () {
-							getData($(this));
-						});
+						expandDivs(newDiv);
 					}
 			});
-		});
+		}
+		var testvar;
+		var projWrap = $(".project-wrap");
+		var testHeight = projWrap.outerHeight();
+		function expandDivs(loadedDiv){
+			var newDiv = loadedDiv;
+			if(!filesLoaded){
+				projWrap.append(newDiv);
+				filesLoaded = true;
+				testvar = projWrap.height();
+			}
+			projWrap.css("height", testHeight);
+			setTimeout(function(){
+				projWrap.css("height");
+				projWrap.addClass("wrap-animation");
+				projWrap.css("height", testvar);
+			}, 0);
+			var moreInfo = $(".moreinfo");
+			moreInfo.unbind("click");
+			moreInfo.click(function () {
+				getData($(this));
+			});
+		}
+		function contractDivs(){
+			projWrap.css("height", $(".project-wrap").height());
+			projWrap.css("height");
+			projWrap.css("height", testHeight);
+		}
 	</script>
 </body>
 </html>

@@ -258,7 +258,7 @@ main {
   background: #f3f3f3;
   margin: 1% 1%;
   padding: 2%;
-  overflow: hidden;
+  overflow: auto;
   max-height: 99%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -299,17 +299,32 @@ main {
   cursor: pointer;
 }
 .expand {
-  width: 100%;
+  width: auto;
+  position: relative;
   float: left;
+  height: 44px;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 20px;
   text-align: center;
-  padding: 10px;
-  color: black;
+  padding: 1%;
+  background: #6495ed;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  color: white;
   font-weight: 400;
-  font-size: 1.750em;
+  font-size: 1.250em;
 }
 .expand:hover {
   cursor: pointer;
+}
+.expand a {
+  float: left;
+  margin-right: 5px;
 }
 .project-wrap {
   float: left;
@@ -346,7 +361,7 @@ main {
 }
 .test-animation {
   transition-property: left, margin-left, top, margin-top, width, height;
-  transition-duration: 0.4s;
+  transition-duration: 0.6s;
 }
 @keyframes flash {
   0% {
