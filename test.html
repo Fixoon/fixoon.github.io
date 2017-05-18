@@ -17,11 +17,10 @@
 					Jag är en student som läser webbprog på Uppsala Universitet i Visby.
 					Det här är bara början på min personliga sida. Tanken är att det ska
 					dyka upp projekt och annat roligt jag har gjort här framöver men för
-					tillfället utvecklar jag bara sidan för skojs skull.
+					tillfället utvecklar jag bara sidan för skojs skull. Lorem ipsum dolor
+					sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua.
 				</p>
-			</div>
-			<div class="angle">
-
 			</div>
 		</div>
 		<div class="outer" id="timeline">
@@ -92,6 +91,10 @@
 						</div>
 					</div>
 				</div>
+				<div class="expand">
+					<a href="javascript:undefined" id="expand-toggle">Visa fler projekt</a>
+					<img src="images/arrow-down.svg" id="expand-toggle-img" />
+				</div>
 			</div>
 		</div>
 		<div class="outer" id="footer">
@@ -119,5 +122,66 @@
 			</div>
 		</div>
 	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="scripts/modal.js"></script>
+	<script>
+		var moreInfo = $(".moreinfo");
+		var isExpanded = false;
+		var filesLoaded = false;
+		moreInfo.click(function () {
+			getData($(this));
+		});
+		$(".expand").click(function(){
+			var expandThis = $(this);
+			if(isExpanded){
+				isExpanded = false;
+				contractDivs();
+				$("#expand-toggle").text("Visa fler projekt");
+				$("#expand-toggle-img").attr("src", "images/arrow-down.svg")
+			}else{
+				isExpanded = true;
+				getProjects();
+				$("#expand-toggle").text("Dölj projekt");
+				$("#expand-toggle-img").attr("src", "images/arrow-up.svg")
+			}
+		});
+		function getProjects(){
+			$.ajax({
+					url : "projects/more.txt",
+					dataType: "text",
+					success : function (data) {
+						var newDiv = $('<div/>').html($.parseHTML(data)).contents();
+						expandDivs(newDiv);
+					}
+			});
+		}
+		var testvar;
+		var projWrap = $(".project-wrap");
+		var testHeight = projWrap.outerHeight();
+		function expandDivs(loadedDiv){
+			var newDiv = loadedDiv;
+			if(!filesLoaded){
+				projWrap.append(newDiv);
+				filesLoaded = true;
+				testvar = projWrap.height();
+			}
+			projWrap.css("height", testHeight);
+			setTimeout(function(){
+				projWrap.css("height");
+				projWrap.addClass("wrap-animation");
+				projWrap.css("height", testvar);
+			}, 0);
+			var moreInfo = $(".moreinfo");
+			moreInfo.unbind("click");
+			moreInfo.click(function () {
+				getData($(this));
+			});
+		}
+		function contractDivs(){
+			projWrap.css("height", $(".project-wrap").height());
+			projWrap.css("height");
+			projWrap.css("height", testHeight);
+		}
+	</script>
 </body>
 </html>

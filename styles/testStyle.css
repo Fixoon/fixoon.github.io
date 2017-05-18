@@ -64,9 +64,8 @@ main {
   padding: 40px 0;
 }
 .inner {
-  width: 1100px;
+  max-width: 1100px;
   margin: 0 auto;
-  z-index: 200;
   position: relative;
 }
 #newAbout {
@@ -94,12 +93,11 @@ main {
   position: relative;
   height: auto;
   margin: 0 auto;
-  width: 90%;
 }
 #timeline h2 {
   text-align: center;
   margin-bottom: 10px;
-  color: black;
+  color: #6495ed;
   font-size: 3.5em;
 }
 #timeline {
@@ -122,7 +120,6 @@ main {
   height: auto;
   padding: 2.2%;
   margin-bottom: 5px;
-  border-bottom: 0.16em solid #6495ed;
   font-size: 1.125em;
   /* PROPERTIES FOR EVEN BOXES */
   /* PROPERTIES FOR ODD BOXES */
@@ -136,6 +133,16 @@ main {
   margin-left: -9px;
   left: 100%;
 }
+.tl-box:nth-of-type(odd):before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  background: #6495ed;
+  top: 0;
+  left: 0;
+}
 .tl-box:nth-of-type(even) {
   margin-left: auto;
   background: #e8ebf1;
@@ -143,6 +150,16 @@ main {
 .tl-box:nth-of-type(even):after {
   margin-right: -9px;
   right: 100%;
+}
+.tl-box:nth-of-type(even):before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  background: #6495ed;
+  top: 0;
+  right: 0;
 }
 .tl-box:last-of-type {
   margin-bottom: 0!important;
@@ -243,13 +260,75 @@ main {
   color: #6495ed;
   cursor: pointer;
 }
+.expand {
+  width: auto;
+  position: relative;
+  float: left;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  text-align: center;
+  padding: 0.8rem;
+  background: #6495ed;
+  color: white;
+  font-weight: 400;
+  font-size: 1.250em;
+}
+.expand:hover {
+  cursor: pointer;
+  background: #4d85ea;
+}
+.expand a {
+  float: left;
+  margin: 0 5px;
+  line-height: 24px;
+  height: 100%;
+}
+.expand img {
+  float: left;
+}
+.project-wrap {
+  float: left;
+  overflow: hidden;
+}
+.wrap-animation {
+  transition: height 0.5s;
+}
+#popup-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+#modal-exit {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: url(../images/close.svg);
+  cursor: pointer;
+}
+#modal-exit a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.test-animation {
+  transition-property: left, margin-left, top, margin-top, width, height;
+  transition-duration: 0.5s;
+}
 #project {
   position: relative;
   background: #f3f3f3;
 }
 #project:before {
   background: white;
-  top: -9%;
+  top: 10px;
   content: '';
   display: block;
   height: 2%;
@@ -257,12 +336,12 @@ main {
   position: absolute;
   right: 0;
   transform: skewY(-1.2deg);
-  transform-origin: 100%;
+  transform-origin: 0% 0;
   z-index: 1;
 }
 #project:after {
   background: #f3f3f3;
-  top: -12%;
+  top: 0;
   content: '';
   display: block;
   height: 50%;
@@ -270,19 +349,20 @@ main {
   position: absolute;
   right: 0;
   transform: skewY(-1.2deg);
-  transform-origin: 100%;
+  transform-origin: 0% 0;
   z-index: -1;
 }
 #project h2 {
   text-align: center;
   color: #6495ed;
+  margin-bottom: 10px;
 }
 #footer {
   background: #6495ed;
 }
 #footer span {
   float: left;
-  line-height: 26px;
+  line-height: 28px;
   font-weight: 400;
   padding-right: 20px;
   color: #fff;
@@ -300,4 +380,123 @@ main {
 }
 #footer h3 {
   margin-bottom: 10px;
+  line-height: 1;
+}
+/* MOBILE PHONE PORTAIT */
+@media only screen and (min-width: 320px) and (max-width: 460px) {
+  .inner {
+    padding: 4%;
+  }
+  .inner p {
+    margin: 0;
+    font-size: 1.125em;
+    line-height: 130%;
+  }
+  .inner h1 {
+    font-size: 3em;
+  }
+  .inner h2 {
+    font-size: 2.75em !important;
+  }
+  .outer {
+    padding: 3% 0;
+  }
+  #timeline {
+    padding: 3% 0;
+  }
+  #newAbout p {
+    font-size: 1.225em;
+  }
+  #newAbout h1 {
+    font-weight: 400;
+  }
+  .tl-box {
+    width: 82vw;
+    padding: 4%;
+    margin: 0 0 6% auto;
+  }
+  .tl-box:before {
+    right: 0 !important;
+    left: auto !important;
+  }
+  .tl-circle {
+    right: 89vw !important;
+    left: auto !important;
+    margin-right: -8px !important;
+  }
+  .tl-box:after {
+    margin-right: -9px !important;
+    right: 100% !important;
+    left: auto !important;
+  }
+  footer span:nth-of-type(4) {
+    display: none;
+  }
+  .project {
+    width: 96%;
+    max-width: 98%;
+    margin: 2%;
+    padding: 4%;
+  }
+  .project:nth-of-type(3n + 1) {
+    margin-left: 2%;
+  }
+  .project:nth-of-type(3n + 3) {
+    margin-right: 2%;
+  }
+  .project p {
+    font-size: 1.125em;
+  }
+  .expand {
+    margin-top: 2%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 350px) {
+  .content p {
+    font-size: 1.1em;
+  }
+  .content h1 {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 461px) and (max-width: 1024px) {
+  nav {
+    font-size: 1.75em;
+  }
+  .inner {
+    padding: 4% !important;
+  }
+  .inner p {
+    margin: 0;
+    font-size: 1.250em;
+  }
+  #about {
+    width: 96%;
+    margin: 2%;
+  }
+  .project {
+    width: 48%;
+    max-width: 98%;
+    margin: 1% !important;
+  }
+  footer span:nth-of-type(4) {
+    display: none;
+  }
+}
+@media screen and (min-width: 1025px) {
+  nav {
+    font-size: 1.75em;
+  }
+  .tl-wrapper {
+    width: 900px;
+  }
+  .tl-box {
+    font-size: 1.25em;
+  }
+  footer {
+    margin-bottom: 3%;
+  }
+  .project {
+    max-width: 600px;
+  }
 }
