@@ -77,6 +77,7 @@ main{
   width: 100%;
   float: left;
   padding: 40px 0;
+	position: relative;
 }
 .inner{
   max-width: 1100px;
@@ -84,10 +85,9 @@ main{
   position: relative;
 }
 
-#newAbout{
+#about{
   color: white;
   background: @baseBlue;
-  position: relative;
   &:before{
     background: inherit;
     bottom: 0;
@@ -106,33 +106,21 @@ main{
   }
 }
 
-
-.tl-wrapper{
-  position: relative;
-  height: auto;
-  margin: 0 auto;
-}
+/* TIMELINE */
 #timeline h2{
   text-align: center;
   margin-bottom: 10px;
   color: @baseBlue;
-  font-size: 3.5em;
 }
 #timeline{
   padding: 100px 0;
 }
 
-.tl-line{
-	position: absolute;
-	width: 2px;
-	height: 4em;
-	background: black;
-	top: 0;
-	height: 100%;
-	left: 50%;
-	margin-left: -1px;
+.tl-wrapper{
+	position: relative;
+	height: auto;
+	margin: 0 auto;
 }
-
 /* TL CONTENT BOX */
 .tl-box{
   position: relative;
@@ -140,14 +128,10 @@ main{
   height: auto;
   padding: 2.2%;
   margin-bottom: 5px;
-  //.border-radius(2px);
-  //border-bottom: 0.16em solid @baseBlue;
-  //.drop-shadow(0, 2px, 5px, 0, .26);
   font-size: 1.125em;
 
   /* PROPERTIES FOR EVEN BOXES */
   &:nth-of-type(odd){
-    //background: #9da2be;
 		background: #f3f3f3;
     &:after{
       margin-left: -9px;
@@ -167,7 +151,6 @@ main{
   /* PROPERTIES FOR ODD BOXES */
   &:nth-of-type(even){
     margin-left: auto;
-    //background: #A9ABB7;
 		background: #e8ebf1;
     &:after{
       margin-right: -9px;
@@ -186,7 +169,7 @@ main{
   }
   /* MAKE LAST BOX HAVE NO BOTTOM MARGIN */
   &:last-of-type{
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
   }
   /* ARROW FOR THE BOXES */
   &:after{
@@ -244,27 +227,61 @@ main{
   }
 }
 
+
+/* PROJECTS */
+#project{
+  background: #f3f3f3;
+	z-index: -2;
+	.inner{
+		opacity: 0.2;
+		filter: grayscale(90%);
+	}
+  &:before{
+    background: white;
+    top: 10px;
+    content: '';
+    display: block;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-1.2deg);
+    transform-origin: 0% 0;
+    z-index: -1;
+  }
+  &:after{
+    background: #f3f3f3;
+    top: 0;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-1.2deg);
+    transform-origin: 0% 0;
+    z-index: -2;
+  }
+  h2{
+    text-align: center;
+    color: @baseBlue;
+		margin-bottom: 10px;
+  }
+}
+/* PROJECT BOXES */
 .project{
 	width: 32%;
 	float: left;
 	background: #e2e2e2;
-	margin: 1% 1%;
+	margin: 1%;
 	padding: 2%;
 	overflow: auto;
 	max-height: 99%;
-	//.border-radius;
-	//.drop-shadow(0, 2px, 5px, 0, .26);
 	&:nth-of-type(3n + 1){
 		margin-left: 0;
 	}
 	&:nth-of-type(3n + 3){
 		margin-right: 0;
-	}
-	img{
-		max-width: 100%;
-		.border-radius(2px);
-		border: 2px solid black;
-		object-fit: contain;
 	}
 	h3{
 		color: @baseBlue;
@@ -348,42 +365,22 @@ main{
 	transition-property: left, margin-left, top, margin-top, width, height;
 	transition-duration: 0.5s;
 }
-
-#project{
-  position: relative;
-  background: #f3f3f3;
-  &:before{
-    background: white;
-    //background: @baseBlue;
-    top: 10px;
-    content: '';
-    display: block;
-    height: 2%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    transform: skewY(-1.2deg);
-    transform-origin: 0% 0;
-    z-index: 1;
-  }
-  &:after{
-    background: #f3f3f3;
-    top: 0;
-    content: '';
-    display: block;
-    height: 50%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    transform: skewY(-1.2deg);
-    transform-origin: 0% 0;
-    z-index: -1;
-  }
-  h2{
-    text-align: center;
-    color: @baseBlue;
-		margin-bottom: 10px;
-  }
+.coming-soon{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	span{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background: @baseBlue;
+		color: white;
+		font-size: 2.5em;
+		padding: 1.125rem;
+		text-align: center;
+	}
 }
 
 #footer{
@@ -433,7 +430,7 @@ main{
   #timeline{
     padding: 3% 0;
   }
-	#newAbout{
+	#about{
 		p{
 			font-size: 1.225em;
 		}
@@ -482,6 +479,11 @@ main{
 	.expand{
 		margin-top: 2%;
 	}
+	.coming-soon{
+		span{
+			width: 90%;
+		}
+	}
 }
 
 //Small phones (ie Iphone 5)
@@ -513,7 +515,13 @@ main{
 	.project{
 		width: 48%;
 		max-width: 98%;
-		margin: 1% !important;
+		margin: 1%;
+		&:nth-child(3n + 3){
+			margin: 1%;
+		}
+		&:nth-child(3n + 1){
+			margin: 1%;
+		}
 	}
   footer span:nth-of-type(4){
     display: none;

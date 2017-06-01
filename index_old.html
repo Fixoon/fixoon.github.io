@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+	<title>Oskar Larsson</title>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+<body>
+	<nav>
+		<a href="">Larsson</a>
+		<div class="nav-buttons-divider"></div>
+		<a class="nav-buttons-disabled" title="Kommer snart">Projekt</a>
+		<div class="nav-buttons-divider"></div>
+		<a href="javascript:undefined" id="contact">Kontakt</a>
+	</nav>
+	<div class="box-wrap">
+		<main>
+		<div class="content" id="about">
+			<h1><b>Oskar Larsson</b></h1>
+			<p>
+				Jag är en utvecklare som nyligen gått klart min utbildning i webbprog
+				på Uppsala Universitet i Visby. Just nu har jag ett sommarjobb som
+				utvecklare här på RAÄ i Visby. Här på min hemsida hittar du mina
+				projekt, erfarenheter och lite information om mig. Har du några frågor
+				eller funderingar är det bara att kontakta mig på någon av
+				alternativen i botten av sidan.
+			</p>
+		</div>
+		<div class="div2ider"></div>
+		<div class="content" id="timeline">
+			<h2>Tidslinje</h2>
+			<div class="tl-wrapper">
+
+				<div class="tl-box">
+					<div class="tl-circle"></div>
+					<b>1994-06-15</b><br>
+					Föddes en åskig natt i Gävle
+				</div>
+				<div class="tl-box">
+					<div class="tl-circle"></div>
+					<b>2001 &#8212; 2010</b><br>
+					Grundskola
+				</div>
+				<div class="tl-box">
+					<div class="tl-circle"></div>
+					<b>2010 &#8212; 2013</b><br>
+					Teknikprogrammet med inriktning IT på Polhemsskolan i Gävle
+				</div>
+				<div class="tl-box">
+					<div class="tl-circle"></div>
+					<b>2013 &#8212; 2015</b><br>
+					...
+				</div>
+				<div class="tl-box">
+					<div class="tl-circle"></div>
+					<b>2015 &#8212; 2017</b><br>
+					Studerade webbprogrammering på Uppsala Universitet i Visby
+				</div>
+			</div>
+		</div>
+		<div class="content" id="project">
+			<h2>Projekt</h2>
+			<div class="project-wrap">
+				<div class="project" data-value="proj_1">
+					<h3>Min portfolio</h3>
+					<p>
+						Den hemsida du just nu är inne på, det vill säga min porfolio. Jag
+						började på den 2015 och utvecklar den knsnt
+					</p>
+					<div class="more-info">
+						<a href="javascript:undefined" class="moreinfo">Mer info</a>
+					</div>
+				</div>
+				<div class="project" data-value="proj_2">
+					<h3>Exjobb RAÄ</h3>
+					<p>
+						Exjobb åt RAÄ som gick ut på att skapa automatisk versionshantering och
+						dokumentation för den.
+					</p>
+					<div class="more-info">
+						<a href="javascript:undefined" class="moreinfo">Mer info</a>
+					</div>
+				</div>
+				<div class="project" data-value="proj_3">
+					<h3>Anlita mig?</h3>
+					<p>
+						Tyckte du mina projekt såg bra ut och har du något projekt du vill ha
+						gjort? Kontakta mig gärna.
+					</p>
+					<div class="more-info">
+						<a href="javascript:undefined" class="moreinfo">Mer info</a>
+					</div>
+				</div>
+			</div>
+			<div class="expand">
+				<a href="javascript:undefined" id="expand-toggle">Visa fler projekt</a>
+				<img src="images/arrow-down.svg" id="expand-toggle-img" />
+			</div>
+		</div>
+		</main>
+		<footer id="footer">
+			<span>
+				<img src="images/twitter-box.svg" width="28" height="28" alt="Twitter icon" />
+				<a href="http://www.twitter.com/oskaaarl" target="_blank" class="tw">@oskaaarl</a>
+			</span>
+			<span>
+				<img src="images/facebook-box.svg" width="28" height="28" alt="Facebook icon" />
+				<a href="http://www.facebook.com/OskarjsL" target="_blank" class="fb">/OskarjsL</a>
+			</span>
+			<span>
+				<img src="images/gmail.svg" width="28" height="28" alt="Gmail icon" />
+				<span class="mail">
+				<noscript>Enable JS to show email</noscript>
+				<script type="text/javascript">
+					var first = "oskar.larsson94";
+					var last = "gmail.com";
+					document.write(first + '@' + last);
+				</script>
+				</span>
+			</span>
+			<span>Copyright Oskar Larsson</span>
+		</footer>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script>
+		var myButton = $('#contact'), myBox = $('footer');
+		myButton.click(function () {
+			$("html, body").scrollTop($(document).height());
+			myBox.addClass('animation');
+			myBox.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+			function(e) {
+				myBox.removeClass('animation');
+			});
+		});
+	</script>
+	<script src="scripts/modal.js"></script>
+	<script>
+		var moreInfo = $(".moreinfo");
+		var isExpanded = false;
+		var filesLoaded = false;
+		moreInfo.click(function () {
+		  getData($(this));
+		});
+		$(".expand").click(function(){
+			var expandThis = $(this);
+			if(isExpanded){
+				isExpanded = false;
+				contractDivs();
+				$("#expand-toggle").text("Visa fler projekt");
+				$("#expand-toggle-img").attr("src", "images/arrow-down.svg")
+			}else{
+				isExpanded = true;
+				getProjects();
+				$("#expand-toggle").text("Dölj projekt");
+				$("#expand-toggle-img").attr("src", "images/arrow-up.svg")
+			}
+		});
+		function getProjects(){
+			$.ajax({
+					url : "projects/more.txt",
+					dataType: "text",
+					success : function (data) {
+						var newDiv = $('<div/>').html($.parseHTML(data)).contents();
+						expandDivs(newDiv);
+					}
+			});
+		}
+		var testvar;
+		var projWrap = $(".project-wrap");
+		var testHeight = projWrap.outerHeight();
+		function expandDivs(loadedDiv){
+			var newDiv = loadedDiv;
+			if(!filesLoaded){
+				projWrap.append(newDiv);
+				filesLoaded = true;
+				testvar = projWrap.height();
+			}
+			projWrap.css("height", testHeight);
+			setTimeout(function(){
+				projWrap.css("height");
+				projWrap.addClass("wrap-animation");
+				projWrap.css("height", testvar);
+			}, 0);
+			var moreInfo = $(".moreinfo");
+			moreInfo.unbind("click");
+			moreInfo.click(function () {
+				getData($(this));
+			});
+		}
+		function contractDivs(){
+			projWrap.css("height", $(".project-wrap").height());
+			projWrap.css("height");
+			projWrap.css("height", testHeight);
+		}
+	</script>
+</body>
+</html>

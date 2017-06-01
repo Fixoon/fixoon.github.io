@@ -4,133 +4,128 @@
 	<meta charset='utf-8'>
 	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
 	<title>Oskar Larsson</title>
-	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<link href="styles/test.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
 <body>
-	<nav>
-		<a href="">Larsson</a>
-		<div class="nav-buttons-divider"></div>
-		<a class="nav-buttons-disabled" title="Kommer snart">Projekt</a>
-		<div class="nav-buttons-divider"></div>
-		<a href="javascript:undefined" id="contact">Kontakt</a>
-	</nav>
-	<div class="box-wrap">
-		<main>
-		<div class="content" id="about">
-			<h1><b>Oskar Larsson</b></h1>
-			<p>
-				Jag är en student som läser webbprog på <b>Uppsala Universitet i Visby.</b>
-				Det här är bara början på min personliga sida. Tanken är att det ska dyka
-				upp projekt och annat roligt jag har gjort här framöver men för tillfället utvecklar
-				jag bara sidan för skojs skull.
-			</p>
+	<main>
+		<div class="outer" id="about">
+			<div class="inner">
+				<h1>Oskar Larsson</h1>
+				<p>
+					Hej! Jag är en utvecklare från Gävle som är bosatt i Visby. Jag
+					flyttade till Visby för att plugga på universitet men är kvar på grund
+					av tillfälligt jobb. Just nu hittar du inte så mycket här men tanken
+					är att jag ska lägga upp projekt och annat kul framöver. Har du några
+					frågor eller funderingar är det bara slänga iväg ett mejl till adressen
+					du hittar längst ner på sidan.
+				</p>
+			</div>
 		</div>
-		<div class="div2ider"></div>
-		<div class="content" id="timeline">
-			<h2>Tidslinje</h2>
-			<div class="tl-wrapper">
-
-				<div class="tl-box">
-					<div class="tl-circle"></div>
-					<b>1994-06-15</b><br>
-					Föddes en åskig natt i Gävle
-				</div>
-				<div class="tl-box">
-					<div class="tl-circle"></div>
-					<b>2001 &#8212; 2010</b><br>
-					Grundskola
-				</div>
-				<div class="tl-box">
-					<div class="tl-circle"></div>
-					<b>2010 &#8212; 2013</b><br>
-					Teknikprogrammet med inriktning IT på Polhemsskolan i Gävle
-				</div>
-				<div class="tl-box">
-					<div class="tl-circle"></div>
-					<b>2013 &#8212; 2015</b><br>
-					...
-				</div>
-				<div class="tl-box">
-					<div class="tl-circle"></div>
-					<b>2015 &#8212; 2017</b><br>
-					Studerar webbprogrammering på Uppsala Universitet i Visby
+		<div class="outer" id="timeline">
+			<div class="inner">
+				<h2>Tidslinje</h2>
+				<div class="tl-wrapper">
+					<div class="tl-box">
+						<div class="tl-circle"></div>
+						<b>1994-06-15</b><br>
+						Föddes en åskig natt i Gävle
+					</div>
+					<div class="tl-box">
+						<div class="tl-circle"></div>
+						<b>2001 &#8212; 2010</b><br>
+						Grundskola
+					</div>
+					<div class="tl-box">
+						<div class="tl-circle"></div>
+						<b>2010 &#8212; 2013</b><br>
+						Teknikprogrammet med inriktning IT på Polhemsskolan i Gävle
+					</div>
+					<div class="tl-box">
+						<div class="tl-circle"></div>
+						<b>2015 &#8212; 2017</b><br>
+						Studerade webbprogrammering på Uppsala Universitet i Visby
+					</div>
+					<div class="tl-box">
+						<div class="tl-circle"></div>
+						<b>2017</b><br>
+						Sommarjobbar på Riksantikvarieämbetet
+					</div>
 				</div>
 			</div>
 		</div>
-		
-		</main>
-		<footer id="footer">
-			<span>
-				<img src="images/twitter-box.svg" width="28" height="28" alt="Twitter icon" />
-				<a href="http://www.twitter.com/oskaaarl" target="_blank" class="tw">@oskaaarl</a>
-			</span>
-			<span>
-				<img src="images/facebook-box.svg" width="28" height="28" alt="Facebook icon" />
-				<a href="http://www.facebook.com/OskarjsL" target="_blank" class="fb">/OskarjsL</a>
-			</span>
-			<span>
-				<img src="images/gmail.svg" width="28" height="28" alt="Gmail icon" />
-				<span class="mail">
-				<noscript>Enable JS to show email</noscript>
-				<script type="text/javascript">
-					var first = "oskar.larsson94";
-					var last = "gmail.com";
-					document.write(first + '@' + last);
-				</script>
+		<div class="outer" id="project">
+			<div class="inner">
+				<h2>Projekt</h2>
+				<div class="project-wrap">
+					<div class="project" data-value="proj_1">
+						<h3>Projektnamn</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consect adipisicing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore aliqua.
+						</p>
+						<div class="more-info">
+							<a href="javascript:undefined" class="moreinfo">Mer info</a>
+						</div>
+					</div>
+					<div class="project" data-value="proj_1">
+						<h3>Projektnamn</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consect adipisicing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore aliqua.
+						</p>
+						<div class="more-info">
+							<a href="javascript:undefined" class="moreinfo">Mer info</a>
+						</div>
+					</div>
+					<div class="project" data-value="proj_1">
+						<h3>Projektnamn</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consect adipisicing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore aliqua.
+						</p>
+						<div class="more-info">
+							<a href="javascript:undefined" class="moreinfo">Mer info</a>
+						</div>
+					</div>
+				</div>
+				<div class="expand">
+					<a href="javascript:undefined" id="expand-toggle">Visa fler projekt</a>
+					<img src="images/arrow-down.svg" id="expand-toggle-img" />
+				</div>
+			</div>
+			<div class="coming-soon">
+				<span>Kommer snart</span>
+			</div>
+		</div>
+		<div class="outer" id="footer">
+			<div class="inner">
+				<h3>Kontakt</h3>
+				<span>
+					<img src="images/twitter-box - Copy.svg" width="28" height="28" alt="Twitter icon" />
+					<a href="http://www.twitter.com/oskaaarl" target="_blank" class="tw">@oskaaarl</a>
 				</span>
-			</span>
-			<span>Copyright Oskar Larsson</span>
-		</footer>
-	</div>
+				<span>
+					<img src="images/facebook-box - Copy.svg" width="28" height="28" alt="Facebook icon" />
+					<a href="http://www.facebook.com/OskarjsL" target="_blank" class="fb">/OskarjsL</a>
+				</span>
+				<span>
+					<img src="images/gmail - Copy.svg" width="28" height="28" alt="Gmail icon" />
+					<span class="mail">
+					<noscript>Enable JS to show email</noscript>
+					<script type="text/javascript">
+						var first = "oskar.larsson94";
+						var last = "gmail.com";
+						document.write(first + '@' + last);
+					</script>
+					</span>
+				</span>
+			</div>
+		</div>
+	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script>
-		var myButton = $('#contact'), myBox = $('footer');
-		myButton.click(function () {
-			$("html, body").scrollTop($(document).height());
-			myBox.addClass('animation');
-			myBox.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
-			function(e) {
-				myBox.removeClass('animation');
-			});
-		});
-	</script>
 	<script src="scripts/modal.js"></script>
-	<script>
-		var moreInfo = $(".moreinfo");
-
-		moreInfo.click(function () {
-		  getData($(this));
-		});
-		$(".expand").click(function(){
-			var expandThis = $(this);
-			$.ajax({
-					url : "projects/more.txt",
-					dataType: "text",
-					success : function (data) {
-						console.log($.parseHTML(data));
-						var newDiv = $('<div/>').html($.parseHTML(data)).contents();
-						var testHeight = $(".project-wrap").outerHeight();
-						$(".project-wrap").append(newDiv);
-						var testvar = $(".project-wrap").height();
-						$(".project-wrap").css("height", testHeight);
-						setTimeout(function(){
-							$(".project-wrap").css("height");
-							$(".project-wrap").addClass("wrap-animation");
-							$(".project-wrap").css("height", testvar);
-						}, 0);
-						setTimeout(function(){
-							$(".project-wrap").css("height", "auto");
-							expandThis.slideUp();
-						}, 800);
-						var moreInfo = $(".moreinfo");
-						moreInfo.unbind("click");
-						moreInfo.click(function () {
-							getData($(this));
-						});
-					}
-			});
-		});
-	</script>
+	<script src="scripts/expand.js"></script>
 </body>
 </html>

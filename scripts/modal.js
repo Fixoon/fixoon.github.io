@@ -1,4 +1,6 @@
-
+$(".moreinfo").click(function () {
+  getData($(this));
+});
 
 function getData(div){
   var projectDiv = div;
