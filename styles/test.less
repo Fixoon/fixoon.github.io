@@ -112,9 +112,6 @@ main{
   margin-bottom: 10px;
   color: @baseBlue;
 }
-#timeline{
-  padding: 100px 0;
-}
 
 .tl-wrapper{
 	position: relative;
@@ -141,7 +138,7 @@ main{
 			content: "";
 			display: block;
 			position: absolute;
-			width: 1%;
+			width: 4px;
 			height: 100%;
 			background: @baseBlue;
 			top: 0;
@@ -160,7 +157,7 @@ main{
 			content: "";
 			display: block;
 			position: absolute;
-			width: 1%;
+			width: 4px;
 			height: 100%;
 			background: @baseBlue;
 			top: 0;
@@ -208,7 +205,8 @@ main{
   top: 50%;
   margin-top: -8px;
   .border-radius(50%);
-	border: 2px solid #808080;
+	//border: 2px solid #808080;
+	border: 2px solid #8499bd;
 
 	//The line
   &:before, &:after{
@@ -457,9 +455,6 @@ main{
     right: 100% !important;
     left: auto !important;
   }
-  footer span:nth-of-type(4){
-    display: none;
-  }
 
 	.project{
 		width: 96%;
@@ -488,12 +483,17 @@ main{
 
 //Small phones (ie Iphone 5)
 @media only screen and (min-width : 320px) and (max-width : 350px) {
-	.content p{
+	.inner p{
     font-size: 1.1em;
   }
-  .content h1{
+  .inner h1{
     font-size: 2.5em;
   }
+	.coming-soon{
+		span{
+			font-size: 2em;
+		}
+	}
 }
 
 //Tablet and mobile landscape
@@ -508,9 +508,8 @@ main{
     margin: 0;
     font-size: 1.250em;
   }
-	#about{
-		width: 96%;
-		margin: 2%;
+	.outer{
+		padding: 10px 0;
 	}
 	.project{
 		width: 48%;
@@ -523,16 +522,11 @@ main{
 			margin: 1%;
 		}
 	}
-  footer span:nth-of-type(4){
-    display: none;
-  }
+
 }
 
 // Desktop
 @media screen and (min-width: 1025px) {
-  nav{
-    font-size: 1.75em;
-  }
   .tl-wrapper{
     width: 900px;
   }
@@ -544,5 +538,8 @@ main{
   }
 	.project{
 		max-width: 600px;
+	}
+	#timeline{
+		padding: 100px 0;
 	}
 }

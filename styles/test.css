@@ -95,9 +95,6 @@ main {
   margin-bottom: 10px;
   color: #6495ed;
 }
-#timeline {
-  padding: 100px 0;
-}
 .tl-wrapper {
   position: relative;
   height: auto;
@@ -127,7 +124,7 @@ main {
   content: "";
   display: block;
   position: absolute;
-  width: 1%;
+  width: 4px;
   height: 100%;
   background: #6495ed;
   top: 0;
@@ -145,7 +142,7 @@ main {
   content: "";
   display: block;
   position: absolute;
-  width: 1%;
+  width: 4px;
   height: 100%;
   background: #6495ed;
   top: 0;
@@ -193,7 +190,7 @@ main {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  border: 2px solid #808080;
+  border: 2px solid #8499bd;
 }
 .tl-circle:before,
 .tl-circle:after {
@@ -434,9 +431,6 @@ main {
     right: 100% !important;
     left: auto !important;
   }
-  footer span:nth-of-type(4) {
-    display: none;
-  }
   .project {
     width: 96%;
     max-width: 98%;
@@ -460,11 +454,14 @@ main {
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 350px) {
-  .content p {
+  .inner p {
     font-size: 1.1em;
   }
-  .content h1 {
+  .inner h1 {
     font-size: 2.5em;
+  }
+  .coming-soon span {
+    font-size: 2em;
   }
 }
 @media only screen and (min-width: 461px) and (max-width: 1024px) {
@@ -478,9 +475,8 @@ main {
     margin: 0;
     font-size: 1.250em;
   }
-  #about {
-    width: 96%;
-    margin: 2%;
+  .outer {
+    padding: 10px 0;
   }
   .project {
     width: 48%;
@@ -493,14 +489,8 @@ main {
   .project:nth-child(3n + 1) {
     margin: 1%;
   }
-  footer span:nth-of-type(4) {
-    display: none;
-  }
 }
 @media screen and (min-width: 1025px) {
-  nav {
-    font-size: 1.75em;
-  }
   .tl-wrapper {
     width: 900px;
   }
@@ -512,5 +502,8 @@ main {
   }
   .project {
     max-width: 600px;
+  }
+  #timeline {
+    padding: 100px 0;
   }
 }
