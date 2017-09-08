@@ -1,0 +1,30 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    $.ajax({
+    type: 'GET',
+    url: 'http://api.scb.se/OV0104/v1/doris/sv/ssd/START/BE/BE0001/BE0001D/BE0001T04Ar',
+    data: { get_param: 'value' },
+    dataType: 'json',
+    success: function (data) {
+        console.dir(data);
+    }
+  });
+  $.ajax({
+    type: "POST",
+    url: "http://api.scb.se/OV0104/v1/doris/sv/ssd/START/BE/BE0001/BE0001D/BE0001T04Ar",
+    // The key needs to match your method's input parameter (case-sensitive).
+    data: "",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data){console.dir(data);},
+    failure: function(errMsg) {
+        alert(errMsg);
+    }
+});
+  </script>
+</body>
+</html>
