@@ -17,12 +17,11 @@ var obj2 = {header:"Kommer snart", description: `Jag har skapat en Android-app s
 var obj3 = {header: "Min sida",
             description: `<p>Jag började på den här sidan våren 2015 mest för
             skojs skull. Jag hade inget direkt syfte med sidan utan tyckte det
-            skulle vara kul att ha en egen hemsida bara. Sidan har gått igenom
-            många ändringar. Jag har ändrat designen många gånger och innehållet
-            en del gånger också. Designen som är nu har jag haft ett tag och är
-            den första designen jag känner mig riktigt nöjd med. All design och
-            JavaScript har jag gjort själv. Innehållet på sidan uppdateras då
-            och då.</p>`,
+            skulle vara kul att ha en egen hemsida bara. Det har inte varit lätt
+            att skapa sidan då jag inte riktigt vetat vad den ska innehålla. Men
+            jag är rätt nöjd med sidan som den är nu, mest designmässigt dock,
+            innehållet är väl sådär. Hela sidan är designad (om man bortser från
+            ikonerna då) och kodad av mig.</p>`,
             images: [], thumbs: []}
 
 var projectObjects = [obj3, obj2]
