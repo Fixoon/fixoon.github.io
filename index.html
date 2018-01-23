@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset='utf-8'>
-	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="images/icons/favicon-16x16.png" sizes="16x16" />
 	<title>Oskar Larsson</title>
-	<link href="styles/test.css" rel="stylesheet" type="text/css" />
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link href="styles/style.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="initial-scale=1">
 </head>
 <body>
 	<main>
@@ -55,60 +55,31 @@
 		<div class="outer" id="project">
 			<div class="inner">
 				<h2>Projekt</h2>
-				<div class="project-wrap">
-					<div class="project" data-value="proj_1">
-						<h3>Projektnamn</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consect adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore aliqua.
-						</p>
-						<div class="more-info">
-							<a href="javascript:undefined" class="moreinfo">Mer info</a>
-						</div>
+				<div class="project-name-wrapper">
+					<div class="project-name project-name-active">
+						Min hemsida
 					</div>
-					<div class="project" data-value="proj_1">
-						<h3>Projektnamn</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consect adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore aliqua.
-						</p>
-						<div class="more-info">
-							<a href="javascript:undefined" class="moreinfo">Mer info</a>
-						</div>
-					</div>
-					<div class="project" data-value="proj_1">
-						<h3>Projektnamn</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consect adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore aliqua.
-						</p>
-						<div class="more-info">
-							<a href="javascript:undefined" class="moreinfo">Mer info</a>
-						</div>
+					<div class="project-name">
+						Android-app
 					</div>
 				</div>
-				<div class="expand">
-					<a href="javascript:undefined" id="expand-toggle">Visa fler projekt</a>
-					<img src="images/arrow-down.svg" id="expand-toggle-img" />
+				<div class="full-project">
 				</div>
-			</div>
-			<div class="coming-soon">
-				<span>Kommer snart</span>
 			</div>
 		</div>
 		<div class="outer" id="footer">
 			<div class="inner">
 				<h3>Kontakt</h3>
 				<span>
-					<img src="images/facebook.svg" width="28" height="28" alt="Facebook icon" />
+					<img src="images/icons/facebook.svg" width="28" height="28" alt="Facebook icon" />
 					<a href="http://www.facebook.com/OskarjsL" target="_blank" class="fb">/OskarjsL</a>
 				</span>
 				<span>
-					<img src="images/linkedin.svg" width="28" height="28" alt="Linkedin icon" />
+					<img src="images/icons/linkedin.svg" width="28" height="28" alt="Linkedin icon" />
 					<a href="https://www.linkedin.com/in/oskar-larsson-606327142/" target="_blank" class="tw">LinkedIn</a>
 				</span>
 				<span>
-					<img src="images/gmail.svg" width="28" height="28" alt="Gmail icon" />
+					<img src="images/icons/gmail.svg" width="28" height="28" alt="Gmail icon" />
 					<span class="mail">
 					<noscript>Enable JS to show email</noscript>
 					<script type="text/javascript">
@@ -122,8 +93,7 @@
 		</div>
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script src="scripts/modal.js"></script>
-	<script src="scripts/expand.js"></script>
+	<script src="scripts/projects.js"></script>
 	<style>
 	@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
 	</style>

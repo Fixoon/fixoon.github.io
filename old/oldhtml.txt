@@ -1,0 +1,36 @@
+<!--<div class="project-wrap">
+					<div class="project" data-value="proj_1">
+						<h3>Projektnamn</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consect adipisicing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore aliqua.
+						</p>
+						<div class="more-info">
+							<a href="javascript:undefined" class="moreinfo">Mer info</a>
+						</div>
+					</div>
+					<div class="project" data-value="proj_1">
+						<h3>Projektnamn</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consect adipisicing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore aliqua.
+						</p>
+						<div class="more-info">
+							<a href="javascript:undefined" class="moreinfo">Mer info</a>
+						</div>
+					</div>
+					<div class="project" data-value="proj_1">
+						<h3>Projektnamn</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consect adipisicing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore aliqua.
+						</p>
+						<div class="more-info">
+							<a href="javascript:undefined" class="moreinfo">Mer info</a>
+						</div>
+					</div>
+				</div>
+				<div class="expand">
+					<a href="javascript:undefined" id="expand-toggle">Visa fler projekt</a>
+					<img src="images/icons/arrow-down.svg" id="expand-toggle-img" />
+				</div>-->
