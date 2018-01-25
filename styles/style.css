@@ -193,6 +193,7 @@ main {
   -moz-border-radius: 50%;
   border-radius: 50%;
   border: 2px solid #8499bd;
+  background: #ffffff;
 }
 .tl-circle:before,
 .tl-circle:after {

@@ -11,8 +11,8 @@ var obj = {header: "Drinkerino",
           <p><a href=\'https://github.com/Fixoon/fixoon.github.io\'>Länk till appen på Github</a></p>`,
           images: ["drinkscreen1.png", "drinkscreen2.png", "drinkscreen3.png", "drinkscreen4.png"]}
 
-var obj2 = {header:"Kommer snart", description: `Jag har skapat en Android-app som jag
-            tänkte visa upp här snart.`, images: []}
+var obj2 = {header:"Kommer snart", description: `<p>Jag har skapat en Android-app som jag
+            tänkte visa upp här snart.</p>`, images: []}
 
 var obj3 = {header: "Min sida",
             description: `<p>Jag började på den här sidan våren 2015 mest för
