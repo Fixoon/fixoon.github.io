@@ -383,6 +383,13 @@ main {
 }
 /* MOBILE PHONE PORTAIT */
 @media only screen and (min-width: 320px) and (max-width: 460px) {
+  h1 {
+    font-size: 3em;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 2.75em;
+  }
   .inner {
     padding: 4%;
   }
@@ -391,23 +398,11 @@ main {
     font-size: 1.125em;
     line-height: 130%;
   }
-  .inner h1 {
-    font-size: 3em;
-  }
-  .inner h2 {
-    font-size: 2.75em !important;
-  }
   .outer {
-    padding: 3% 0;
-  }
-  #timeline {
     padding: 3% 0;
   }
   #about p {
     font-size: 1.225em;
-  }
-  #about h1 {
-    font-weight: 400;
   }
   .tl-box {
     width: 82vw;
@@ -418,15 +413,15 @@ main {
     right: 0 !important;
     left: auto !important;
   }
-  .tl-circle {
-    right: 89vw !important;
-    left: auto !important;
-    margin-right: -8px !important;
-  }
   .tl-box:after {
     margin-right: -9px !important;
     right: 100% !important;
     left: auto !important;
+  }
+  .tl-circle {
+    right: 89vw !important;
+    left: auto !important;
+    margin-right: -8px !important;
   }
   .project-name {
     margin-bottom: 2%;
@@ -443,11 +438,23 @@ main {
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 350px) {
-  .inner p {
-    font-size: 1.1em;
+  p {
+    font-size: 1.125em;
   }
-  .inner h1 {
+  h1 {
     font-size: 2.5em;
+  }
+  #about p {
+    font-size: 1.125em;
+  }
+  .tl-box {
+    font-size: 1em;
+  }
+  .tl-box:after {
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: -8px !important;
+    margin-top: -8px;
   }
 }
 @media only screen and (min-width: 461px) and (max-width: 1024px) {
