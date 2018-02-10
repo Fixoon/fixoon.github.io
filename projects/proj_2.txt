@@ -1,5 +1,0 @@
-﻿Examensarbete åt Riksantikvarieämbetet i Visby. Det gick ut på att kolla möjligheterna för automatiserad dokumentation för deras utveckling. Dokumentationen innehåller saker som vilka features som är nya, vilka buggar som blev fixade, vilket versionsnummer och när den skapades med mera.
-<br /><br />
-Examensarbete åt Riksantikvarieämbetet i Visby. Det gick ut på att kolla möjligheterna för automatiserad dokumentation för deras utveckling. Dokumentationen innehåller saker som vilka features som är nya, vilka buggar som blev fixade, vilket versionsnummer och när den skapades med mera.
-<br /><br />
-Examensarbete åt Riksantikvarieämbetet i Visby. Det gick ut på att kolla möjligheterna för automatiserad dokumentation för deras utveckling. Dokumentationen innehåller saker som vilka features som är nya, vilka buggar som blev fixade, vilket versionsnummer och när den skapades med mera.
