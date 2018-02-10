@@ -1,5 +1,6 @@
 {
     "commands": [
-        "styles/*.less : lessc styles/{filename} styles/{name}.css"
+        "styles/*.less : lessc styles/{filename} styles/{name}.css",
+        "scripts/projects.js : babel ./scripts/projects.js --out-file ./scripts/script.js"
     ]
 }
