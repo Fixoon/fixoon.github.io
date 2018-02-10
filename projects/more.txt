@@ -1,19 +1,19 @@
-﻿			<div class="project" data-value="proj_1">
-				<h3>Projekt #4</h3>
+﻿			<div class="project expanded" data-value="proj_1">
+				<h3>Projektnamn</h3>
 				<p>
-				Detta är en lite kortare beskrivning om ett projekt. Trycker man på
-				"Visa mer" får man upp mer info.
+					Detta är bara placeholders för projekt och kommer innehålla riktig
+					info någon gång. Just nu är de här bara för att.
 				</p>
 				<div class="more-info">
 					<a href="javascript:undefined" class="moreinfo">Mer info</a>
 				</div>
 			</div>
-			<div class="project" data-value="proj_1">
-				<h3>Projekt #5</h3>
-				<p>
-				Detta är en lite kortare beskrivning om ett projekt. Trycker man på
-				"Visa mer" får man upp mer info.
-				</p>
+			<div class="project expanded" data-value="proj_1">
+			<h3>Projektnamn</h3>
+			<p>
+			Detta är bara placeholders för projekt och kommer innehålla riktig
+			info någon gång. Just nu är de här bara för att.
+			</p>
 				<div class="more-info">
 					<a href="javascript:undefined" class="moreinfo">Mer info</a>
 				</div>

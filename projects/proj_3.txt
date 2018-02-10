@@ -1,1 +1,1 @@
-﻿Detta är en lite kortare beskrivning om ett projekt. Trycker man på "Visa mer" får man upp en ruta med mer info. Det är bara att testa. Tryck på den vita texten nere i högra hörnet. Grattis du lyckades trycka på "Visa mer" och nu har du fått upp en ruta med lite mer text än tidigare.
+﻿Examensarbete åt Riksantikvarieämbetet i Visby. Det gick ut på att kolla möjligheterna för automatiserad dokumentation för deras utveckling. Dokumentationen innehåller saker som vilka features som är nya, vilka buggar som blev fixade, vilket versionsnummer och när den skapades med mera.
