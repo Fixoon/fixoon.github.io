@@ -22,7 +22,7 @@ var obj2 = {header:"Drinkerino",
             "finns en hel del jag skulle kunna gjort bättre och jag kanske fixar " +
             "det framöver men nu får den vara som den är.</p>" +
             "<p><a href='https://github.com/Fixoon/Drinkerino' target='_blank'>Länk till appen på Github</a></p>",
-            images: ["home.png", "liked.png", "filter.png", "recipe.png"]}
+            images: ["drinkerino_home.png", "drinkerino_liked.png", "drinkerino_filter.png", "drinkerino_recipe.png"]}
 
 var obj3 = {header: "Min sida",
             description: "<p>Jag började på den här sidan våren 2015 mest för " +
