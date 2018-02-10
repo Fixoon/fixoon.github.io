@@ -64,9 +64,8 @@ function showProject(currentProject){
     fullProject.append(imageWrapper)
     for(let i = 0; i < currentProject.images.length; i++){
         var imageDiv = $(document.createElement('div')).addClass("project-image")
-        var currentImage = currentProject.images[i]
         imageDiv.click(function(){
-          zoomImage(currentImage)
+          zoomImage(currentProject.images[i])
         })
         var imageTag = $(document.createElement('img')).attr("src", "images/thumbs/" + currentProject.images[i])
         imageDiv.append(imageTag);
