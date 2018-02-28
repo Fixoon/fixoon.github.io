@@ -14,8 +14,8 @@ var proj2 = {header:"Drinkerino",
             litet tag. Jag utvecklade den mest för skojs skull och för att lära mig.
             Appen innehåller recept på drinkar och har funktioner
             som filtrering och gillningar. Utöver det är den väldigt simpel.
-            Jag har designat appen och kodat den helt själv. Den är skriven i
-            Kotlin och det här är första gången jag testar det. Jag har försökt
+            Jag har designat och kodat appen själv. Den är skriven i
+            Kotlin och det här är första gången jag försöker mig på det. Jag har försökt
             följa Googles riktlinjer \"Material Design\" så gott det gått. Det
             finns en hel del jag skulle kunna gjort bättre och jag kanske fixar
             det framöver men nu får den vara som den är.</p>
