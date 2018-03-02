@@ -15,14 +15,15 @@ var proj2 = {header:"Drinkerino",
             Appen innehåller recept på drinkar och har funktioner
             som filtrering och gillningar. Utöver det är den väldigt simpel.
             Jag har designat och kodat appen själv. Den är skriven i
-            Kotlin och det här är första gången jag försöker mig på det. Jag har försökt
-            följa Googles riktlinjer \"Material Design\" så gott det gått. Det
-            finns en hel del jag skulle kunna gjort bättre och jag kanske fixar
-            det framöver men nu får den vara som den är.</p>
+            Kotlin och det är första gången jag försöker mig på det. Jag har
+            försökt följa Googles riktlinjer \"Material Design\" så gott det
+            gått när det kommer till designen. Det finns alltid saker att fixa
+            och förbättra med appen och jag uppdaterar den lite då och då när jag
+            känner för det men featuremässigt kommer jag nog inte göra så mycket på ett tag.</p>
             <p><a href='https://github.com/Fixoon/Drinkerino' target='_blank'>Länk till appen på Github</a></p>`,
             images: ["drinkerino_home.png", "drinkerino_liked.png", "drinkerino_filter.png", "drinkerino_recipe.png"]}
 
-var projectObjects = [proj1, proj2]
+var projectObjects = [proj2, proj1]
 var headers = $(".project-name");
 
 headers.on("click", function(){
