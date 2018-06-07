@@ -1,7 +1,7 @@
 "use strict";
 
 var proj1 = { header: "Min sida",
-  description: "<p>Jag b\xF6rjade p\xE5 den h\xE4r sidan v\xE5ren 2015 mest f\xF6r\n            skojs skull. Jag hade inget direkt syfte med sidan utan tyckte det\n            skulle vara kul att ha en egen hemsida bara. Det har inte varit l\xE4tt\n            att skapa sidan d\xE5 jag inte riktigt vetat vad den ska inneh\xE5lla. Men\n            jag \xE4r r\xE4tt n\xF6jd med sidan som den \xE4r nu, mest designm\xE4ssigt dock,\n            inneh\xE5llet \xE4r v\xE4l s\xE5d\xE4r. Hela sidan \xE4r designad (om man bortser fr\xE5n\n            ikonerna d\xE5) och kodad av mig.</p>",
+  description: "<p>Jag b\xF6rjade p\xE5 den h\xE4r sidan v\xE5ren 2015 mest f\xF6r\n            skojs skull. Jag hade inget direkt syfte med sidan utan tyckte det\n            skulle vara kul att ha en egen hemsida bara. Det har inte varit l\xE4tt\n            att skapa sidan d\xE5 jag inte riktigt vetat vad den ska inneh\xE5lla. Men\n            jag \xE4r r\xE4tt n\xF6jd med sidan som den \xE4r nu. Hela sidan \xE4r designad och\n            kodad av mig.</p>",
   images: [] };
 
 var proj2 = { header: "Drinkerino",

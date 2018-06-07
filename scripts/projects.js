@@ -4,9 +4,8 @@ var proj1 = {header: "Min sida",
             skojs skull. Jag hade inget direkt syfte med sidan utan tyckte det
             skulle vara kul att ha en egen hemsida bara. Det har inte varit lätt
             att skapa sidan då jag inte riktigt vetat vad den ska innehålla. Men
-            jag är rätt nöjd med sidan som den är nu, mest designmässigt dock,
-            innehållet är väl sådär. Hela sidan är designad (om man bortser från
-            ikonerna då) och kodad av mig.</p>`,
+            jag är rätt nöjd med sidan som den är nu. Hela sidan är designad och
+            kodad av mig.</p>`,
             images: []}
 
 var proj2 = {header:"Drinkerino",
