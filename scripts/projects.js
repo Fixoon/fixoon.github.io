@@ -22,7 +22,22 @@ var proj2 = {header:"Drinkerino",
             <p><a href='https://github.com/Fixoon/Drinkerino' target='_blank'>Länk till appen på Github</a></p>`,
             images: ["drinkerino_home.png", "drinkerino_liked.png", "drinkerino_filter.png", "drinkerino_recipe.png"]}
 
-var projectObjects = [proj2, proj1]
+var proj3 = {header: "Kontrollvred",
+            description: `<p>Jag har skapat ett fysiskt vred som kontrollerar
+            ljudvolymen på Spotify samt ljusstyrkan på min skärm. Hårdvaran är
+            en Arduino Nano och en "rotary encoder". På Arduinon kör jag ett
+            program som läser input och som sedan skickar seriell data som jag
+            sedan läser av i ett Node-program. För att styra volymen i Spotify
+            använder jag deras webAPI och för att justera ljusstyrkan använder
+            jag DDC/CI-protkollet. Jag skapade den här prylen för att kunna
+            justera volymen på Spotify när jag kör applikationer i fullskärm och
+            för att det är omständigt att justera ljusstyrkan i skärmens egna
+            menyer. Den fungerar helt okej och gör det jag vill så jag är nöjd
+            med resultatet. Nedan är bilder på vredet och kontrollpanelen.</p>
+            <p><a href='https://github.com/Fixoon/control-knob' target='_blank'>Länk till Node-programmet på Github</a></p>`,
+            images: ["knob.png", "knob_control.png"]}
+
+var projectObjects = [proj3, proj2, proj1]
 var headers = $(".project-name");
 
 headers.on("click", function(){

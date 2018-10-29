@@ -8,7 +8,11 @@ var proj2 = { header: "Drinkerino",
   description: "<p>Drinkerino \xE4r en Android-app jag jobbat p\xE5 ett\n            litet tag. Jag utvecklade den mest f\xF6r skojs skull och f\xF6r att l\xE4ra mig.\n            Appen inneh\xE5ller recept p\xE5 drinkar och har funktioner\n            som filtrering och gillningar. Ut\xF6ver det \xE4r den v\xE4ldigt simpel.\n            Jag har designat och kodat appen sj\xE4lv. Den \xE4r skriven i\n            Kotlin och det \xE4r f\xF6rsta g\xE5ngen jag f\xF6rs\xF6ker mig p\xE5 det. Jag har\n            f\xF6rs\xF6kt f\xF6lja Googles riktlinjer \"Material Design\" s\xE5 gott det\n            g\xE5tt n\xE4r det kommer till designen. Det finns alltid saker att fixa\n            och f\xF6rb\xE4ttra med appen och jag uppdaterar den lite d\xE5 och d\xE5 n\xE4r jag\n            k\xE4nner f\xF6r det men featurem\xE4ssigt kommer jag nog inte g\xF6ra s\xE5 mycket p\xE5 ett tag.</p>\n            <p><a href='https://github.com/Fixoon/Drinkerino' target='_blank'>L\xE4nk till appen p\xE5 Github</a></p>",
   images: ["drinkerino_home.png", "drinkerino_liked.png", "drinkerino_filter.png", "drinkerino_recipe.png"] };
 
-var projectObjects = [proj2, proj1];
+var proj3 = { header: "Kontrollvred",
+  description: "<p>Jag har skapat ett fysiskt vred som kontrollerar\n            ljudvolymen p\xE5 Spotify samt ljusstyrkan p\xE5 min sk\xE4rm. H\xE5rdvaran \xE4r\n            en Arduino Nano och en \"rotary encoder\". P\xE5 Arduinon k\xF6r jag ett\n            program som l\xE4ser input och som sedan skickar seriell data som jag\n            sedan l\xE4ser av i ett Node-program. F\xF6r att styra volymen i Spotify\n            anv\xE4nder jag deras webAPI och f\xF6r att justera ljusstyrkan anv\xE4nder\n            jag DDC/CI-protkollet. Jag skapade den h\xE4r prylen f\xF6r att kunna\n            justera volymen p\xE5 Spotify n\xE4r jag k\xF6r applikationer i fullsk\xE4rm och\n            f\xF6r att det \xE4r omst\xE4ndigt att justera ljusstyrkan i sk\xE4rmens egna\n            menyer. Den fungerar helt okej och g\xF6r det jag vill s\xE5 jag \xE4r n\xF6jd\n            med resultatet. Nedan \xE4r bilder p\xE5 vredet och kontrollpanelen.</p>\n            <p><a href='https://github.com/Fixoon/control-knob' target='_blank'>L\xE4nk till Node-programmet p\xE5 Github</a></p>",
+  images: ["knob.png", "knob_control.png"] };
+
+var projectObjects = [proj3, proj2, proj1];
 var headers = $(".project-name");
 
 headers.on("click", function () {
