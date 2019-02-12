@@ -110,7 +110,7 @@ main{
 }
 
 /* TIMELINE */
-#timeline h2{
+.outer:nth-of-type(2) h2{
   text-align: center;
   margin-bottom: 10px;
   color: @baseBlue;
@@ -231,7 +231,7 @@ main{
 
 
 /* PROJECTS */
-#project{
+.outer:nth-of-type(3){
   background: #f3f3f3;
 	z-index: 0;
   &:before{
@@ -283,7 +283,7 @@ main{
 	background: #e2e2e2;
 	font-size: 1.125em;
 	font-weight: 400;
-	border-bottom: 0.15em solid #e2e2e2;
+	border-bottom: 0.15em solid #d2d2d2;
 	display: inline-block;
 	&:hover{
 		border-bottom: 0.15em solid lighten(@baseBlue, 10%);
@@ -527,7 +527,7 @@ main{
   footer{
     margin-bottom: 3%;
   }
-	#timeline{
-		padding: 100px 0;
+	.outer:nth-of-type(2){
+		padding: 80px 0;
 	}
 }
