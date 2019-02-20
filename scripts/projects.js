@@ -35,7 +35,7 @@ var proj3 = {header: "Kontrollvred",
             menyer. Den fungerar helt okej och gör det jag vill så jag är nöjd
             med resultatet. Nedan är bilder på vredet och kontrollpanelen.</p>
             <p><a href='https://github.com/Fixoon/control-knob' target='_blank'>Länk till Node-programmet på Github</a></p>`,
-            images: ["knob.png", "knob_control.png"]}
+            images: ["knob.png", "knob_control_panel.png"]}
 
 var projectObjects = [proj3, proj2, proj1]
 var headers = $(".project-name");

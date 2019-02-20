@@ -10,7 +10,7 @@ var proj2 = { header: "Drinkerino",
 
 var proj3 = { header: "Kontrollvred",
   description: "<p>Jag har skapat ett fysiskt vred som kontrollerar\n            ljudvolymen p\xE5 Spotify samt ljusstyrkan p\xE5 min sk\xE4rm. H\xE5rdvaran \xE4r\n            en Arduino Nano och en \"rotary encoder\". P\xE5 Arduinon k\xF6r jag ett\n            program som l\xE4ser input och som sedan skickar seriell data som jag\n            sedan l\xE4ser av i ett Node-program. F\xF6r att styra volymen i Spotify\n            anv\xE4nder jag deras webAPI och f\xF6r att justera ljusstyrkan anv\xE4nder\n            jag DDC/CI-protkollet. Jag skapade den h\xE4r prylen f\xF6r att kunna\n            justera volymen p\xE5 Spotify n\xE4r jag k\xF6r applikationer i fullsk\xE4rm och\n            f\xF6r att det \xE4r omst\xE4ndigt att justera ljusstyrkan i sk\xE4rmens egna\n            menyer. Den fungerar helt okej och g\xF6r det jag vill s\xE5 jag \xE4r n\xF6jd\n            med resultatet. Nedan \xE4r bilder p\xE5 vredet och kontrollpanelen.</p>\n            <p><a href='https://github.com/Fixoon/control-knob' target='_blank'>L\xE4nk till Node-programmet p\xE5 Github</a></p>",
-  images: ["knob.png", "knob_control.png"] };
+  images: ["knob.png", "knob_control_panel.png"] };
 
 var projectObjects = [proj3, proj2, proj1];
 var headers = $(".project-name");
